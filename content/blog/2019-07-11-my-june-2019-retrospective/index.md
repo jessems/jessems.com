@@ -164,7 +164,7 @@ It's hard to say where this money should come from, so it's hard to say whether 
 
 It's somewhat strange to see this goal up here. I spent 0 hours studying German this month. Even though I'm also surprised the actual number is 0, in May it was only 4 hours, 11:30 in April and 22 in March. So it seems I've slowly been deprioritizing this topic. I'm not _too_ bothered by that. German does feel less important right now and perhaps I should deprioritize it as a yearly goal as well. I will be setting more conservative weekly goals for German and see how I feel next month. Verdict: NO
 
-### <Private>
+###
 
 ...
 
