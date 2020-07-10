@@ -156,11 +156,11 @@ _(The above could be a good start for a new blog post. Agree? Let me know @jesse
 
 _Am I on track to achieve my yearly goals? If not, why not?_
 
-### 1 month of >10k CHF revenue [Financial]
+### 1 month of >10k CHF revenue \[Financial\]
 
 It's hard to say where this money should come from, so it's hard to say whether or not progress was made. Materially, no, no progress was made. In fact, reaching $0/month on RBR for the first time in a while actually constitutes regression. Having said that, 1 or 2 good clients with Pocket Revolutions would get me to $10k a month. My final verdict would have to be: MORE-OR-LESS
 
-### 120 hours of self-study German [German]
+### 120 hours of self-study German \[German\]
 
 It's somewhat strange to see this goal up here. I spent 0 hours studying German this month. Even though I'm also surprised the actual number is 0, in May it was only 4 hours, 11:30 in April and 22 in March. So it seems I've slowly been deprioritizing this topic. I'm not _too_ bothered by that. German does feel less important right now and perhaps I should deprioritize it as a yearly goal as well. I will be setting more conservative weekly goals for German and see how I feel next month. Verdict: NO
 

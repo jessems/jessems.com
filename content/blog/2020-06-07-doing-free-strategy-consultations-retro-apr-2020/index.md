@@ -44,7 +44,7 @@ My time expenditure doesn't seem very focused. Axova app and PR website have a l
 
 I'm spending a lot of time on this path of learning about Roam, reading, taking notes etc. But what is it bringing me? #\[\[❓ Open questions\]\] #\[\[Provoking Questions\]\]
 
-## \[\[Did I achieve my objectives?\]\]
+## Did I achieve my objectives?
 
 1. Axova app finished properly #\[\[\[\[🏗\]\] Axova App\]\]
    1. Yes, I finished this in April. Only in May did I launch this.
@@ -53,7 +53,7 @@ I'm spending a lot of time on this path of learning about Roam, reading, taking 
 3. PR website is functioning properly
    1. No, because I only wanted to move to this once (1) was finished.
 
-## \[\[Am I on track to achieve my yearly objectives?\]\]
+## Am I on track to achieve my yearly objectives?
 
 - Earn 200k with Pocket Revolutions in 2020 (10/200)
   - No. I'm quite behind here.
@@ -62,14 +62,14 @@ I'm spending a lot of time on this path of learning about Roam, reading, taking 
 - Get involved with 5 new apps (1/5)
   - No, also quite behind here. Also questioning whether this is the right goal.
 
-## \[\[Review my \[\[Journaling\]\] thoughts\]\]
+## Review my Journaling thoughts
 
 Proud about the strategy sessions and finishing the app
 
-## \[\[What went well?\]\]
+## What went well?
 
 The strategy sessions went well, but I'm not sure if this is what I should be doing.
 
-## \[\[What should I do differently?\]\]
+## What should I do differently?
 
 Maybe I'm spending too much time on this track of where I want to be e.g. reading, taking notes, twitter etc. Maybe I should be spending more time on the uncomfortable track of talking to people, reaching out etc.
