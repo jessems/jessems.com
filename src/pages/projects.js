@@ -58,51 +58,26 @@ export default function Index({ data: { site, allMdx } }) {
   const theme = useTheme()
   return (
     <Layout site={site}>
-      <Hero />
       <Container
         css={css`
           padding-bottom: 0;
         `}
       >
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
-          >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary,
-                },
-              })}
-            >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
-        <Link to="/blog" aria-label="Visit blog page">
-          View all articles
-        </Link>
-        <hr />
-      </Container>
+        <h2>Rapid Breakup Recovery</h2>
+Rapid Breakup Recovery is my ongoing attempt at creating a better solution for guys that find themselves in the throes of a breakup. I post regularly on the blog, there's currently an active Facebook community  and I sell <a href="https://rapidbreakuprecovery.com/breakup-coaching/">coaching</a> and an ebook called the <a href="https://rapidbreakuprecovery.com/breakup-recovery-manual-for-men/">Breakup Recovery Manual for Men</a>.
+
+MRR: ~$200
+<h2>Pingcoin</h2>
+<a href="http://pingcoin.com">Pingcoin</a> is an ongoing passion project. It is an Android app for sound-based counterfeit coin detection.
+
+MRR: $0
+<h2>Mute Politics</h2>
+<a href="https://github.com/jessems/mute-politics-twitter">Mute Politics</a> is collection of scripts that make it easier to block politicians and political topics on Twitter. It was borne from my frustration with people who I follow for their industry-expertise polluting my timeline with petty politics.
+
+MRR: $0
+
+&nbsp;
+         </Container>
     </Layout>
   )
 }
@@ -116,7 +91,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      limit: 99
+      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { ne: false } } }
     ) {
