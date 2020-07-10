@@ -76,9 +76,8 @@ _Am I on track to achieve my yearly goals? If not, why not?_
 
 My yearly goals are:
 
-- 1 month of >10k CHF revenue \[Financial\]
-- 120 hours of self-study German \[German\]
-- \*\*Private\*\*
+- 1 month of >10k CHF revenue
+- 120 hours of self-study German
 - The first goal, it's hard to say. If I find some clients for my agency work and I'm able to charge a decent amount.
 - The second goal feels like it needs to be changed. German hasn't been a focus for the last several months now. And although I would like be more fluent, it doesn't seem that important to me anymore right now.
 
