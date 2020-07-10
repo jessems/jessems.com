@@ -5,7 +5,6 @@ title: 'Distracted by Corona [Retro Mar, 2020]'
 description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
-banner: './images/banner.jpg'
 published: true
 author: 'author'
 redirects:
