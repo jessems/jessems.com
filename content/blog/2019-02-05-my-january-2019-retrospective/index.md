@@ -5,7 +5,6 @@ title: 'My January 2019 Retrospective'
 description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
-banner: './images/banner.jpg'
 published: true
 author: 'author'
 redirects:

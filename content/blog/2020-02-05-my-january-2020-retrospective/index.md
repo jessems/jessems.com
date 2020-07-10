@@ -5,7 +5,6 @@ title: 'Finding out I procrastinate [Retro Jan, 2020]'
 description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
-banner: './images/banner.jpg'
 published: true
 author: 'author'
 redirects:

@@ -5,7 +5,6 @@ title: 'Digitally rendered 3D elevation + 1798 political map of Switzerland'
 description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
-banner: './images/banner.jpg'
 published: true
 author: 'author'
 redirects:
