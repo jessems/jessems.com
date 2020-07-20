@@ -28,15 +28,15 @@ It seems Paul wants to use the blindness aspect he ascribes to privilege to desc
 
 There are two problems with this.
 
-First of all, blindness is not part of any definition of privilege.
+_Firstly_, blindness is not part of any definition of privilege.
 
 ![Definition of privilege](./images/privilege.png)
-
-Secondly, we already have a word for describing 'blindness' in our thinking. It's called a cognitive bias.
 
 Even though Paul seems to think it is:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Privilege is more specific. It's a specific type of blindness afflicting those who've led a sheltered existence.</p>&mdash; Paul Graham (@paulg) <a href="https://twitter.com/paulg/status/1283434346196742145?ref_src=twsrc%5Etfw">July 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+_Secondly_, we already have a word for describing 'blindness' in our thinking. It's called a cognitive bias.
 
 What Paul is describing in his essay is not a privelege. It is a cognitive bias. It's probably close to [Groupthink](https://en.wikipedia.org/wiki/Groupthink), but because it involves a failure to empathize, I think it might be appropriate to call it an [Empathy Gap](https://en.wikipedia.org/wiki/Empathy_gap).
 
