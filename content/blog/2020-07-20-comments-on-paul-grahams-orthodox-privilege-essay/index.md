@@ -6,7 +6,6 @@ description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
 published: true
-author: 'author'
 redirects:
   - '/invisible-post-423123'
 ---
