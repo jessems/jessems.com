@@ -40,6 +40,8 @@ _Secondly_, we already have a word for describing 'blindness' in our thinking. I
 
 What Paul is describing in his essay is not a privelege. It is a cognitive bias. It's probably close to [Groupthink](https://en.wikipedia.org/wiki/Groupthink), but because it involves a failure to empathize, I think it might be appropriate to call it an [Empathy Gap](https://en.wikipedia.org/wiki/Empathy_gap).
 
-More specifically, an empathy gap that people experience when they're inside what they've dubbed the [Opinion Corridor](https://en.wikipedia.org/wiki/Opinion_corridor) in Sweden, in wich people don't question the norms within the group due to the high social costs associated with presenting an opposing view.
+To describe who experience this cognitive bias which manifests as a failure to empathize, I believe it's helpful to borrow a term originally coined in Sweden: The [Opinion Corridor](https://en.wikipedia.org/wiki/Opinion_corridor) — A range of opinions delineated by the perceived high social costs associated with challenging them.
+
+I believe what Paul is describing is a failure on part of the people with opinions within the Opinion Corridor to empathize with the people with opinions outside of it.
 
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Maybe the definition of privilege has moved, but I cannot recognise or corroborate this definition.<br /><br />What you're describing sounds like a bias — an empathy gap experienced by people within an Opinion Corridor towards people outside of it.</p>&mdash; Jesse Szepieniec (@jessems) <a href="https://twitter.com/jessems/status/1285087174124277760?ref_src=twsrc%5Etfw">July 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
