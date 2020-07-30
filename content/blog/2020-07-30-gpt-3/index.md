@@ -1,24 +1,53 @@
 ---
-slug: gpt3
+slug: gpt-3
 date: '2020-07-30'
-title: 'Insights into GPT3'
+title: 'Insights into GPT-3'
 description: 'An overview of my insights into using GPT3'
 categories: ['gpt3']
 keywords: ['gpt3']
 published: true
 ---
 
+## GPT-3 is best thought of as an autocompleter. It replies with what it thinks the internet would reply with.
+
+Nick Cammarata offers a way to think about GPT-3.
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I think improve will work. Keep in mind gpt3 is an autocompleter. It’s not trying to write a great essay, just the essay it thinks the internet would write. When you ask it to improve it, now it’s trying to write a great essay</p>&mdash; Nick Cammarata (@nicklovescode) <a href="https://twitter.com/nicklovescode/status/1284685741759492096?ref_src=twsrc%5Etfw">July 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## GPT3 does well answering simple, factual questions, but doesn't notice nonsensical questions
 
-Kevin Lacker [found](http://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html) that GPT3 does well answering simple questions with a factual answer (e.g. "Who was the president of the United States in 1955?") while getting fooled by absurd answers without noticing they are nonsensical (e.g. "Q: How many eyes does the sun have? A: The sun has one eye").
+Kevin Lacker [found](http://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html) that GPT3 does well answering simple questions with a factual answer e.g.
 
-## GPT3 can be primed to learn logic encoded within a character sequence
+```
+"Q: Who was the president of the United States in 1955?"
+```
+
+while getting fooled by absurd answers without noticing they are nonsensical e.g.
+
+```
+Q: How many eyes does the sun have?
+A: The sun has one eye
+```
+
+## GPT-3 can be primed to learn logic encoded within a character sequence
 
 [@bucketofkets](https://twitter.com/nabeelqu/bucketofkets) [finds](https://twitter.com/bucketofkets/status/1288569064365817856?s=20) GPT3 learns text-based navigation instructions.
 
 Which seems to conflict somewhat with Gwern's [results](https://www.gwern.net/GPT-3#parity) that GPT-3 cannot do parity checking. He offers an explanation which I still need to spend time on to understand.
 
-## Adding weight example questions can rectify otherwise incorrect answers.
+## GPT-3 seems to be a highly effective therapist
+
+@nicklovescode finds that GPT-3 is a highly potent therapist.
+
+This is the prompt he used:
+
+```
+This is a conversation between Nick and a brilliant, warm therapist named John.
+```
+
+Here's the result: ![](https://pbs.twimg.com/media/Ec9J9a-UEAAafD0?format=jpg&name=small)
+
+## Adding weight example questions can rectify otherwise incorrect answers
 
 [@nabeelqu](https://twitter.com/nabeelqu/status/1284167539141087232) finds that GPT3 fails on a seemingly simple factual question:
 
