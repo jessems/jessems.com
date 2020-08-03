@@ -53,6 +53,10 @@ This is a conversation between Nick and a brilliant, warm therapist named John.
 
 Here's the result: ![](https://pbs.twimg.com/media/Ec9J9a-UEAAafD0?format=jpg&name=small)
 
+## GPT-3 seems well suited to generate alternative phrasings
+
+This could be useful for, for instance, AB testing, as already put into production by [Visual Website Optimizer](https://www.producthunt.com/posts/humans-vs-ai).
+
 ## Adding weight example questions can rectify otherwise incorrect answers
 
 [@nabeelqu](https://twitter.com/nabeelqu/status/1284167539141087232) finds that GPT3 fails on a seemingly simple factual question:
