@@ -14,7 +14,7 @@ Nick Cammarata offers a way to think about GPT-3.
 
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I think improve will work. Keep in mind gpt3 is an autocompleter. It’s not trying to write a great essay, just the essay it thinks the internet would write. When you ask it to improve it, now it’s trying to write a great essay</p>&mdash; Nick Cammarata (@nicklovescode) <a href="https://twitter.com/nicklovescode/status/1284685741759492096?ref_src=twsrc%5Etfw">July 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## GPT-3 does well answering simple, factual questions, but doesn't notice nonsensical questions
+## Answering simple questions
 
 Kevin Lacker [found](http://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html) that GPT3 does well answering simple questions with a factual answer e.g.
 
@@ -29,7 +29,7 @@ Q: How many eyes does the sun have?
 A: The sun has one eye
 ```
 
-## GPT-3 does well on tasks of expanding on and explaining topics
+## Explaining topics
 
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">1/ Asked <a href="https://twitter.com/RichardDawkins?ref_src=twsrc%5Etfw">@RichardDawkins</a> on GPT3 to explain the central idea of his book &quot;The Selfish Gene&quot;.<br/><br/>Here&#39;s what it said.<br/><br/>(Everything after Dear Paras is GPT3). <a href="https://t.co/hAfeeYxPAP">pic.twitter.com/hAfeeYxPAP</a></p>&mdash; Paras Chopra (@paraschopra) <a href="https://twitter.com/paraschopra/status/1284423233047900161?ref_src=twsrc%5Etfw">July 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -41,7 +41,11 @@ A: The sun has one eye
 
 Which seems to conflict somewhat with Gwern's [results](https://www.gwern.net/GPT-3#parity) that GPT-3 cannot do parity checking. He offers an explanation which I still need to spend time on to understand.
 
-## GPT-3 seems to be a highly effective therapist
+## Assisted writing
+
+The folks at Tinkered Thinking write [a podcast episode](https://tinkeredthinking.com/?id=836) in conjunction with GPT-3.
+
+## Therapy
 
 @nicklovescode finds that GPT-3 is a highly potent therapist.
 
@@ -53,9 +57,15 @@ This is a conversation between Nick and a brilliant, warm therapist named John.
 
 Here's the result: ![](https://pbs.twimg.com/media/Ec9J9a-UEAAafD0?format=jpg&name=small)
 
-## GPT-3 seems well suited to generate alternative phrasings
+## Generating alternative phrasing
 
-This could be useful for, for instance, AB testing, as already put into production by [Visual Website Optimizer](https://www.producthunt.com/posts/humans-vs-ai).
+This could be useful for, for instance, AB testing, as already put into production by [Visual Website Optimizer](https://www.producthunt.com/posts/humans-vs-ai) or writing Google Ads.
+
+## Generating memes
+
+What's interesting about this application is how much of the "cultural subtext" GPT-3 is able to reference.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tired: Making your own memes<br>Wired: Asking <a href="https://twitter.com/OpenAI?ref_src=twsrc%5Etfw">@OpenAI</a>&#39;s <a href="https://twitter.com/hashtag/gpt3?src=hash&amp;ref_src=twsrc%5Etfw">#gpt3</a> to make memes.<br><br>Amazed to see how much of cultural subtext and nuance language models can pick up on. cc: <a href="https://twitter.com/gwern?ref_src=twsrc%5Etfw">@gwern</a> <a href="https://twitter.com/gdb?ref_src=twsrc%5Etfw">@gdb</a> <a href="https://t.co/eBrFAWiZhA">pic.twitter.com/eBrFAWiZhA</a></p>&mdash; Mrinal Mohit (@wowitsmrinal) <a href="https://twitter.com/wowitsmrinal/status/1287175391040290816?ref_src=twsrc%5Etfw">July 25, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Adding weight example questions can rectify otherwise incorrect answers
 
