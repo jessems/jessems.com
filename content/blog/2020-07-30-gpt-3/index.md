@@ -10,9 +10,9 @@ published: true
 
 ## GPT-3 is best thought of as an autocompleter. It replies with what it thinks the internet would reply with.
 
-Nick Cammarata offers a way to think about GPT-3.
+Nick Cammarata [offers](https://twitter.com/nickcammarata/status/1284685741759492096) a way to think about GPT-3.
 
-<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I think improve will work. Keep in mind gpt3 is an autocompleter. It’s not trying to write a great essay, just the essay it thinks the internet would write. When you ask it to improve it, now it’s trying to write a great essay</p>&mdash; Nick Cammarata (@nicklovescode) <a href="https://twitter.com/nicklovescode/status/1284685741759492096?ref_src=twsrc%5Etfw">July 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> I think improve will work. Keep in mind gpt3 is an autocompleter. It’s not trying to write a great essay, just the essay it thinks the internet would write. When you ask it to improve it, now it’s trying to write a great essay
 
 ## Answering simple questions
 
@@ -31,9 +31,9 @@ A: The sun has one eye
 
 ## Explaining topics
 
-<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">1/ Asked <a href="https://twitter.com/RichardDawkins?ref_src=twsrc%5Etfw">@RichardDawkins</a> on GPT3 to explain the central idea of his book &quot;The Selfish Gene&quot;.<br/><br/>Here&#39;s what it said.<br/><br/>(Everything after Dear Paras is GPT3). <a href="https://t.co/hAfeeYxPAP">pic.twitter.com/hAfeeYxPAP</a></p>&mdash; Paras Chopra (@paraschopra) <a href="https://twitter.com/paraschopra/status/1284423233047900161?ref_src=twsrc%5Etfw">July 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/paraschopra/status/1284423233047900161
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I didn&#39;t quite understand everything in your tweet, so I passed it through the <a href="https://twitter.com/OpenAI?ref_src=twsrc%5Etfw">@OpenAI</a> <a href="https://twitter.com/hashtag/GPT3?src=hash&amp;ref_src=twsrc%5Etfw">#GPT3</a> API.<br/><br/>It took multiple runs and some tweaks, and I&#39;m still not sure I can trust it entirely, but here&#39;s what it came up with.<br/><br/>I think I understand your point now. Or have I been misled? <a href="https://t.co/X0noJX7D0v">pic.twitter.com/X0noJX7D0v</a></p>&mdash; Jesse Szepieniec (@jessems) <a href="https://twitter.com/jessems/status/1283030473816576002?ref_src=twsrc%5Etfw">July 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/jessems/status/1283030473816576002
 
 ## GPT-3 can be primed to learn logic encoded within a character sequence
 
@@ -65,7 +65,7 @@ This could be useful for, for instance, AB testing, as already put into producti
 
 What's interesting about this application is how much of the "cultural subtext" GPT-3 is able to reference.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tired: Making your own memes<br>Wired: Asking <a href="https://twitter.com/OpenAI?ref_src=twsrc%5Etfw">@OpenAI</a>&#39;s <a href="https://twitter.com/hashtag/gpt3?src=hash&amp;ref_src=twsrc%5Etfw">#gpt3</a> to make memes.<br><br>Amazed to see how much of cultural subtext and nuance language models can pick up on. cc: <a href="https://twitter.com/gwern?ref_src=twsrc%5Etfw">@gwern</a> <a href="https://twitter.com/gdb?ref_src=twsrc%5Etfw">@gdb</a> <a href="https://t.co/eBrFAWiZhA">pic.twitter.com/eBrFAWiZhA</a></p>&mdash; Mrinal Mohit (@wowitsmrinal) <a href="https://twitter.com/wowitsmrinal/status/1287175391040290816?ref_src=twsrc%5Etfw">July 25, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/wowitsmrinal/status/1287175391040290816
 
 ## Adding weight example questions can rectify otherwise incorrect answers
 
@@ -125,3 +125,11 @@ Q: Which is heavier, a toaster or a pencil?
 ## Context based dictionary
 
 https://twitter.com/tusharkhattar_/status/1294631853224206339
+
+## GPT-3's writing can be good enough to fool people
+
+Liam Porr generated some blog posts with GPT-3 and was able to get a significant amount of people to upvote it on Hacker News and subscribe to his newsletter. He details this [here](https://liamp.substack.com/p/my-gpt-3-blog-got-26-thousand-visitors).
+
+## GPT-3 writes an API
+
+https://twitter.com/SamanyouGarg/status/1295039749221097472
