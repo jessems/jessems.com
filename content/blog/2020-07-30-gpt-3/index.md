@@ -121,3 +121,7 @@ Q: Which is heavier, a toaster or a pencil?
 |A: A toaster.
 |A: A toaster.
 ```
+
+## Context based dictionary
+
+https://twitter.com/tusharkhattar_/status/1294631853224206339
