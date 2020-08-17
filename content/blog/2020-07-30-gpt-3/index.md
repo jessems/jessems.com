@@ -130,6 +130,12 @@ https://twitter.com/tusharkhattar_/status/1294631853224206339
 
 Liam Porr generated some blog posts with GPT-3 and was able to get a significant amount of people to upvote it on Hacker News and subscribe to his newsletter. He details this [here](https://liamp.substack.com/p/my-gpt-3-blog-got-26-thousand-visitors).
 
+# Code and syntax generation
+
 ## GPT-3 writes an API
 
 https://twitter.com/SamanyouGarg/status/1295039749221097472
+
+## GPT-3 write command line commands
+
+https://twitter.com/shivkanthb/status/1292565827116363777
