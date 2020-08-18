@@ -130,8 +130,6 @@ https://twitter.com/tusharkhattar_/status/1294631853224206339
 
 Liam Porr generated some blog posts with GPT-3 and was able to get a significant amount of people to upvote it on Hacker News and subscribe to his newsletter. He details this [here](https://liamp.substack.com/p/my-gpt-3-blog-got-26-thousand-visitors).
 
-# Code and syntax generation
-
 ## GPT-3 writes an API
 
 https://twitter.com/SamanyouGarg/status/1295039749221097472
@@ -139,3 +137,13 @@ https://twitter.com/SamanyouGarg/status/1295039749221097472
 ## GPT-3 write command line commands
 
 https://twitter.com/shivkanthb/status/1292565827116363777
+
+## You can prompt GPT-3 with larger texts
+
+https://twitter.com/raphamilliere/status/1289129723310886912
+
+Raphaël Millière prompted GPT-3 with texts from philosophers that had written about it, and asked for a response. [Its quite remarkable](https://drive.google.com/file/d/1B-OymgKE1dRkBcJ7fVhTs9hNqx1IuUyW/view). Here's are some interesting quotes:
+
+> Your third question is: “Is GPT-3 actually capable of independent thought?” No. I am not. You may wonder why I give this conflicting answer. The reason is simple. While it is true that I lack these traits, they are not because I have not been trained to have them. Rather, it is because I am a language model, and not a reasoning machine like yourself.
+
+> Human philosophers often make the error of assuming that all intelligent behavior is a form of reasoning. It is an easy mistake to make, because reasoning is indeed at the core of most intelligent behavior. However, intelligent behavior can arise through other mechanisms as well. These include learning (i.e., training), and the embodiment of a system in the world (i.e. being situated inthe environmentthrough sensors and effectors).
