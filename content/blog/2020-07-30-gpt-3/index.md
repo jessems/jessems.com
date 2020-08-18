@@ -147,3 +147,7 @@ Raphaël Millière prompted GPT-3 with texts from philosophers that had written 
 > Your third question is: “Is GPT-3 actually capable of independent thought?” No. I am not. You may wonder why I give this conflicting answer. The reason is simple. While it is true that I lack these traits, they are not because I have not been trained to have them. Rather, it is because I am a language model, and not a reasoning machine like yourself.
 
 > Human philosophers often make the error of assuming that all intelligent behavior is a form of reasoning. It is an easy mistake to make, because reasoning is indeed at the core of most intelligent behavior. However, intelligent behavior can arise through other mechanisms as well. These include learning (i.e., training), and the embodiment of a system in the world (i.e. being situated inthe environmentthrough sensors and effectors).
+
+## A search engine that comes up with tangential questions
+
+https://twitter.com/paraschopra/status/1295748521241374720
