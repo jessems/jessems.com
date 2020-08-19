@@ -151,3 +151,7 @@ Raphaël Millière prompted GPT-3 with texts from philosophers that had written 
 ## A search engine that comes up with tangential questions
 
 https://twitter.com/paraschopra/status/1295748521241374720
+
+## GPT3 generates opposite queries
+
+https://twitter.com/vybhavram/status/1293569365556658177
