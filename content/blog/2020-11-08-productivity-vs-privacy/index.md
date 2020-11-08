@@ -93,6 +93,8 @@ To summarize, data harvesting and interoperability on part of the service provid
 
 ---
 
+Thanks to [Alan Szepieniec](https://asz.ink/) for reviewing a draft of this essay.
+
 [1] Special mention of Lavabit needs to be made, Edward Snowden’s email provider of choice back in the day. The owner [bravely shut down his service](https://en.wikipedia.org/wiki/Lavabit#:~:text=Lavabit%20is%20an%20open%2Dsource,on%20Edward%20Snowden's%20email.) (and business) rather than hand over his customers SSL private keys.
 
 [2] If Facebook knows that a lot of people are clicking through some UI to find a search function, they can deduce that it’s probably important, and place it somewhere more prominently.
