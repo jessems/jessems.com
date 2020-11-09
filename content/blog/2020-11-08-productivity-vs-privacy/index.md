@@ -39,7 +39,7 @@ How does technology lead to increases in productivity? One obvious way is by mak
 
 What exactly are the things that increase efficiency for the tasks that we do? In many ways, in the realm of knowledge work, we don't always know before the gains are made. We are still discovering ways in which we can be more productive and especially so in the ways in which collaboration can be improved.
 
-In developing Figma, [as Kwok details](https://kwokchain.com/2020/06/19/why-figma-wins/), the product team discovered a way to enable more efficient collaboration in the design process. That this was possible wasbn't obvious to even those within the scene. While Sketch had broken new ground with their vector based design tool geared towards product designers, Figma took it to another level by taking many of the same (dare I say revolutionary) UX patterns and offering them in a web-native, multiplayer web application.
+In developing Figma, [as Kwok details](https://kwokchain.com/2020/06/19/why-figma-wins/), the product team discovered a way to enable more efficient collaboration in the design process. That this was possible wasn't obvious to even those within the scene. While Sketch had broken new ground with their vector based design tool geared towards product designers, Figma took it to another level by taking many of the same (dare I say revolutionary) UX patterns and offering them in a web-native, multiplayer web application.
 
 > The core insight of Figma is that design is larger than just designers. Design is all of the conversations between designers and PMs about what to build. It is the mocks and prototypes and the feedback on them. It is the handoff of specs and assets to engineers and how easy it is for them to implement them.
 
