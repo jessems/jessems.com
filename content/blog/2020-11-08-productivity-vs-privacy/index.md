@@ -23,7 +23,7 @@ One such email provider, Gmail by Google, started off by scanning your emails to
 
 What unites these platforms, is described by Professor Shoshana Zuboff as “[surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)”. The business model of surveillance capitalist companies is to harvest personal data about you to build a model that predicts your behavior. These prediction models are packaged and sold as advertisement opportunities to companies eager to buy your attention. The incentive of surveillance capitalists is to harvest your data so they can keep you on the platform and get you to interact with ads. You might be the user, but you're not the customer.
 
-It shouldn't come as no surprise then, that none of these platforms has shipped with end-to-end encryption by default. Doing so would go against the incentives that undergird their very business model. Their ability to predict your behavior, and sell ads based on those predictions, hinges on their ability to harvest your data.
+It should come as no surprise then, that none of these platforms has shipped with end-to-end encryption by default. Doing so would go against the incentives that undergird their very business model. Their ability to predict your behavior, and sell ads based on those predictions, hinges on their ability to harvest your data.
 
 Selling your data as a predictive model is not the only incentive that exists for collecting your data. Usage data also helps inform product improvements. These improvements typically make the experience even more compelling [2].
 
