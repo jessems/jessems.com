@@ -37,9 +37,9 @@ We can think about the productivity of a business by considering a company’s p
 
 How does technology lead to increases in productivity? One obvious way is by making us more efficient. If some new technology saves us time doing a certain task, all other things being equal, we’ll end up seeing those gains in our outputs (corporate profits and salaries).
 
-What exactly are the things that increase efficiency for the tasks that we do? In many ways, in the realm of knowledge work, we don't always know before the gains are made. We are still discovering ways in which we can be more productive and especially so in the ways in which collaboration can be improved.
+What exactly are the things that increase efficiency for the tasks that we do? In many ways, in the realm of knowledge work, we don't always know before the gains are made. We are still discovering ways in which we can be more productive and especially so in the ways in which collaboration can be improved. A illustrative example of how productivity gains are discovered comes from Kevin A. Kwok's description of Figma's road to success.
 
-In developing Figma, [as Kwok details](https://kwokchain.com/2020/06/19/why-figma-wins/), the product team discovered a way to enable more efficient collaboration in the design process. That this was possible wasn't obvious to even those within the scene. While Sketch had broken new ground with their vector based design tool geared towards product designers, Figma took it to another level by taking many of the same (dare I say revolutionary) UX patterns and offering them in a web-native, multiplayer web application.
+In "Why Figma Wins", [Kwok details](https://kwokchain.com/2020/06/19/why-figma-wins/) how the product team discovered a way to enable more efficient collaboration in the design process. That this was possible wasn't obvious to even those within the scene. While Sketch had broken new ground with their vector based design tool geared towards product designers, Figma took it to another level by taking many of the same (dare I say revolutionary) UX patterns and offering them in a web-native, multiplayer web application.
 
 > The core insight of Figma is that design is larger than just designers. Design is all of the conversations between designers and PMs about what to build. It is the mocks and prototypes and the feedback on them. It is the handoff of specs and assets to engineers and how easy it is for them to implement them.
 
@@ -61,7 +61,7 @@ Historically, as we saw with the origins of GPG, there has always been additiona
 
 If you compare the productivity gains between privacy-preserving and non-preserving products from the perspective of the user, it's hard not to arrive at the conclusion that there’s a gap between the two — and it appears to be growing.
 
-There is perhaps no better example of a feature which hinges on the ability to read user data than search. Although ProtonMail is reminiscent of Gmail in many ways, one area where it falls short is the absence of any ability to  search the contents of your emails. Search only works if the provider of such functionality can scan and index your content. It works even better if the provider is able to harvest search queries and use those to build predictive models (e.g. autocomplete and smart suggestions). These are features which make Gmail users more productive but aren't available to ProtonMail users.
+There is perhaps no better example of a feature which hinges on the ability to read user data than search. Although ProtonMail is reminiscent of Gmail in many ways, one area where it falls short is the absence of any ability to  search the contents of your emails. Search only works if the provider of such functionality can scan and index your content. It works even better if the provider is able to harvest search queries and use those to build predictive models (e.g. autocomplete and smart suggestions). These are features which make Gmail users more productive but aren't available to ProtonMail users [3].
 
 The absence of search might not be a dealbreaker for a journalist wanting only to communicate securely with a source. But it is just one example of an ever growing list of productivity improvements that are happening on the side of non-privacy preserving products which cannot be mirrored on the side of the privacy preserving ones.
 
@@ -98,3 +98,5 @@ Thanks to [Alan Szepieniec](https://asz.ink/) and [Adriaan van Rossum](https://s
 [1] Special mention of Lavabit needs to be made, Edward Snowden’s email provider of choice back in the day. The owner [bravely shut down his service](https://en.wikipedia.org/wiki/Lavabit#:~:text=Lavabit%20is%20an%20open%2Dsource,on%20Edward%20Snowden's%20email.) (and business) rather than hand over his customers SSL private keys.
 
 [2] If Facebook knows that a lot of people are clicking through some UI to find a search function, they can deduce that it’s probably important, and place it somewhere more prominently.
+
+[3] ProtonMail does [seem to be working on such a feature](https://protonmail.com/blog/2018-recap-future-roadmap/), presumably leveraging homomorphic encryption, which would be privacy-preserving.
