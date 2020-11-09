@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: 'https://jessems.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'This is where they post things!',
+  siteDescription: 'Jesse M. Szepieniec',
   author: 'Jesse', // Author for schemaORGJSONLD
   organization: 'Jesse MS',
 
