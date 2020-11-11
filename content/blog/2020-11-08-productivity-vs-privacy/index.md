@@ -32,7 +32,7 @@ What unites platforms like Google and Facebook, is described by Professor Shosha
 It should come as no surprise then, that none of these platforms has shipped with end-to-end encryption by default. Doing so would go against the incentives that undergird their very business model. Their ability to predict your behavior, and sell ads based on those predictions, hinges on their ability to harvest your data.
 
 
-# Data is also collected to improve the service
+## Data is also collected to improve the service
 
 A company like Google has other business models of course. Google Workspace, aimed at businesses, is a collection of collaboration and productivity tools. This ranges from Google Docs, to chat, to video conferencing, and more. By offering this as a paid service, Google exposes itself to a different incentive, one where the customer and the user are now one and the same.
 
