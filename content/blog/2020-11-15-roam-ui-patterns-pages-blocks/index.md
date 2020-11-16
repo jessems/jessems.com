@@ -7,7 +7,7 @@ categories: [roam, ux, ui]
 published: true
 ---
 
-*([Roam Research](roamresearch.com) is a knowledge management tool that has taken a corner of the tech world by storm. It's not easy to use at first, but once you get a hang of the novel UI patterns that it uses, it feels like you're using something which is aligned with how your brain works, as opposed to conventional, linear text editing. This is a weekly series where I cover Roam's UI patterns in-depth in order to understand what Roam is doing that accomplishes this feat. This week we take a closer look at Roam's concept of Pages and Blocks.)*
+*([Roam Research](https://roamresearch.com) is a knowledge management tool that has taken a corner of the tech world by storm. It's not easy to use at first, but once you get a hang of the novel UI patterns that it uses, it feels like you're using something which is aligned with how your brain works, as opposed to conventional, linear text editing. This is a weekly series where I cover Roam's UI patterns in-depth in order to understand what Roam is doing that accomplishes this feat. This week we take a closer look at Roam's concept of Pages and Blocks.)*
 
 # Pages & Blocks
 
