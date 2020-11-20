@@ -23,4 +23,8 @@ This didn't work for me (on Brave/Chrome) however. But the following did [^1]:
 word-break: break-all;
 ```
 
+Here's what the end result looks like:
+
+![](images/end-result.png)
+
 [^1]: [https://stackoverflow.com/questions/7309115/break-huge-urls-so-they-dont-overflow](https://stackoverflow.com/questions/7309115/break-huge-urls-so-they-dont-overflow)
