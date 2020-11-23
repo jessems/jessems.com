@@ -63,7 +63,9 @@ export default function Index({ data: { site, allMdx } }) {
           padding-bottom: 0;
         `}
       >
-      Hi. I'll be telling more about myself here.
+      Hi. My name is Jesse. I'm a former product manager that enjoys building stuff.
+
+      You can reach me here: jessems /a.t./ gmail.com
          </Container>
     </Layout>
   )
