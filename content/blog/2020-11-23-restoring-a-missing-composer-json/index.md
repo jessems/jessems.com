@@ -3,7 +3,7 @@ slug: restoring-composer-json
 date: "2020-11-23"
 title: "Restoring a missing composer.json"
 description: "Restoring a missing composer.json"
-categories: []
+categories: [technical]
 published: true
 ---
 
