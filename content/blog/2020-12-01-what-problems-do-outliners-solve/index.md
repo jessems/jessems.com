@@ -16,4 +16,4 @@ Because outliners are built on a different model, one where the text is treated 
 
 Because of the inherent complexity of the writing process it helps to have a plan and an outline can be that plan. A plan reminds you where you want to go, and what needs to be included, but often you'll also discover new things along the way that need to be included. For this reason, it's important the plan  to be updated easily. A digital outline will typically offer this ability.
 
-[^1]: 
+[^1]: [https://jordanbpeterson.com/wp-content/uploads/2018/02/Essay_Writing_Guide.docx](https://jordanbpeterson.com/wp-content/uploads/2018/02/Essay_Writing_Guide.docx)
