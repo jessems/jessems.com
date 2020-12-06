@@ -3,7 +3,7 @@ slug: cover-image-gatsby-mdx
 date: "2020-12-06"
 title: "Setting up a cover image for your blog template with Gatsby and MDX"
 description: "A walkthrough on how to set up a cover image for your blog template with Gatsby and MDX."
-categories: []
+categories: [gatsby, technical]
 published: true
 ---
 
