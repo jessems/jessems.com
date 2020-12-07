@@ -13,6 +13,16 @@ This is a chronological overview of outlining software applications. I will be u
 
 # ThinkTank (Mac/PC, 1984-1987)
 
+## Summary
+
+Released in June 1984, ThinkTank 128 was one the first electronic outlining applications and the precursor to MORE.
+
+## Screenshots
+
+![](images/thinktank128.png)
+
+https://www.youtube.com/watch?v=OFp0Y1DukdQ
+
 ## Platforms
 
 Mac/PC
@@ -23,25 +33,49 @@ Mac/PC
 
 ## Features
 
+- Expand / collapse items
+- Drag and drop items to re-order
+
 ## More Reading
 
-# More (Mac, -1986)
+http://scripting.com/dwiner/outlinersProgramming.html
+# More (Mac, 1986)
 
 ## Summary
 
 Outliner with the ability to switch between the outline view, a tree chart view and a chart list view (which was suitable for presentations).
 
+## Platforms
+
+Macintosh
+
+## Lifetime
+
+1986
+
+## Features
+
+- Hide / unhide subordinate items
+- Drag and drop items to re-order
+- Tree chart view
+- Bullet chart view
+- Hierarchy-level-specific text formatting
+## Screenshots
+
+![](images/more-outliner.png)
+
 # PC-Outline (DOS, 1987)
 
 ## Summary
 
+An MSDOS text outliner program created by Brown Bag Software.
+
 ## Screenshots
 
-![](https://i.imgur.com/HFVk8hK.jpg)
-
+![](images/pc-outline.png)
 ## Platforms
 
-DOS
+MSDOS
 
 ## Lifetime
 
@@ -49,7 +83,17 @@ DOS
 
 ## Features
 
+- Move items
+- Mark / unmark items
+- Copy / move marks
+- Join / divide items
+- Sort outline level
+- Multi-window (up to 9, resizable)
+- Printing options
+
 ## More Reading
+
+https://www.danielsays.com/ssg-dossw-pco334.html
 
 # GrandView (DOS, 1987-1990)
 
