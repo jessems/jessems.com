@@ -35,6 +35,7 @@ Mac/PC
 
 - Expand / collapse items
 - Drag and drop items to re-order
+- Hoisting
 
 ## More Reading
 
@@ -68,7 +69,7 @@ Macintosh
 
 ## Summary
 
-An MSDOS text outliner program created by Brown Bag Software.
+An MSDOS text outliner program created by Brown Bag Software and a competitor to ThinkTank.
 
 ## Screenshots
 
@@ -99,14 +100,20 @@ https://www.danielsays.com/ssg-dossw-pco334.html
 
 ## Summary
 
+First Outliner supporting color.
 ## Screenshots
 
-## Download
+![](images/grandview.png)
+
+## Features
+
+- Named ranges
 
 ## More Reading
 
-- https://welcometosherwood.wordpress.com/2009/10/10/grandview/
-- https://www.atarimagazines.com/compute/issue139/114_GrandView_20.php
+https://welcometosherwood.wordpress.com/2009/10/10/grandview/
+https://www.atarimagazines.com/compute/issue139/114_GrandView_20.php
+https://books.google.ch/books?id=Eq0wALnyM_MC&q=%22grandview%22+%22friend%22+outliner&pg=PA34&redir_esc=y#v=snippet&q=%22grandview%22%20%22friend%22%20outliner&f=false
 
 # ECCO Pro (Windows, 1993-1997)
 
