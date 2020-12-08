@@ -1,13 +1,15 @@
 ---
-slug: outliner-history
-title: "A history of outlining software"
+slug: outliner-list
+title: "A historical list of outlining software"
 date: "2020-12-07"
-description: "Historical overview of outlining software"
+description: "A historical list of outlining software"
 categories: [outlining]
 published: true
+redirects:
+  - "/outliner-history"
 ---
 
-*Last update: December 7th, 2020*
+*Last update: December 8th, 2020*
 
 This is a chronological overview of outlining software applications. I will be updating this list incrementally.
 
@@ -40,7 +42,7 @@ Mac/PC
 ## More Reading
 
 http://scripting.com/dwiner/outlinersProgramming.html
-# More (Mac, 1986)
+# MORE (Mac, 1986)
 
 ## Summary
 
@@ -100,13 +102,16 @@ https://www.danielsays.com/ssg-dossw-pco334.html
 
 ## Summary
 
-First Outliner supporting color.
+First outliner supporting color. GrandView combined features of a traditional outliner with a spreadsheet (columnar metadata).
 ## Screenshots
 
 ![](images/grandview.png)
 
 ## Features
 
+- Hide / unhide subordinate items
+- Drag and drop items to re-order
+- Hierarchy-level-specific text formatting
 - Named ranges
 
 ## More Reading
@@ -114,6 +119,20 @@ First Outliner supporting color.
 https://welcometosherwood.wordpress.com/2009/10/10/grandview/
 https://www.atarimagazines.com/compute/issue139/114_GrandView_20.php
 https://books.google.ch/books?id=Eq0wALnyM_MC&q=%22grandview%22+%22friend%22+outliner&pg=PA34&redir_esc=y#v=snippet&q=%22grandview%22%20%22friend%22%20outliner&f=false
+
+# Acta (Mac, 1986-1993)
+
+## Summary
+
+Version 1.3 was bundled with Living Videotext's MORE in 1987.
+
+## Screenshots
+
+![](images/acta.png)
+
+## More Reading
+
+https://archive.vn/AGWFc
 
 # ECCO Pro (Windows, 1993-1997)
 
@@ -136,6 +155,14 @@ Green Parrots Software
 ## Screenshots
 
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FSqsgwo-OMv.png?alt=media&token=72aa4cce-9929-49b3-ad6b-5b080baf6c23)
+
+# Opal (Mac)
+
+## Summary
+
+## More Reading
+
+http://archive.today/2020.12.08-074855/http://a-sharp.com/acta/history.html
 
 # ConnectedText (Windows, 2011-2016)
 
