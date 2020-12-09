@@ -9,7 +9,7 @@ redirects:
   - "/outliner-history"
 ---
 
-*Last update: December 8th, 2020*
+*Last update: December 9th, 2020*
 
 This is a chronological overview of outlining software applications. I will be updating this list incrementally.
 
@@ -129,6 +129,8 @@ Version 1.3 was bundled with Living Videotext's MORE in 1987.
 ## Screenshots
 
 ![](images/acta.png)
+![](images/acta-2.png)
+![](images/acta-3.png)
 
 ## More Reading
 
@@ -138,9 +140,30 @@ https://archive.vn/AGWFc
 
 ## Summary
 
+Ecco Pro was a personal information manager software based on an outliner, and supporting folders similar to spreadsheet columns that allow filtering and sorting of information based upon user defined criteria. It was seen to have an easier learning curve than GrandView.
+
 ## Lifetime
 
+1993-1997
+
 ## Screenshots
+
+![](images/ecco-pro.png)
+
+## Features
+
+- Basic outliner functionality
+- Tags
+- Columns with meta data
+- Clipping tool to add highlighted text to your outline
+- Sync with PalmPilot
+
+## More Reading
+
+http://archive.today/2020.12.09-052442/https://www.theguardian.com/technology/2007/jul/26/comment.guardianweeklytechnologysection
+https://en.wikipedia.org/wiki/Ecco_Pro
+https://www.mind-mapping.org/index.php?title=ECCO_Pro
+http://archive.today/2020.12.09-060302/http://www.fredshack.com/docs/pim.html
 
 # Action Outline (Windows, 2000-2012)
 
@@ -156,7 +179,7 @@ Green Parrots Software
 
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FSqsgwo-OMv.png?alt=media&token=72aa4cce-9929-49b3-ad6b-5b080baf6c23)
 
-# Opal (Mac)
+# Opal (Mac, 2006-)
 
 ## Summary
 
