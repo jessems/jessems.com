@@ -34,18 +34,21 @@ Write a function `arrayToList` that builds up a list structure like the one show
 ### My solution
 
 ```js
-function listToArray(inputArray) {
+function arrayToList(inputArray) {
 	let list = {};
   if (inputArray.length > 0) {
-  	list.value = inputArray[0];
-    list.rest = listToArray(inputArray.slice(1))
+      list = prepend(inputArray[0], arrayToList(inputArray.slice(1)));
   } else {
     return null;
   }
   return list;
 }
 
-console.log(listToArray([1,3,5]))
+function prepend(el, list) {
+	return {value: el, rest: list};
+}
+
+console.log(arrayToList([1,3,5]))
 // returns:
 //
 //  {
@@ -58,5 +61,72 @@ console.log(listToArray([1,3,5]))
 //          }
 //      }
 //  }
+
+function listToArray(inputList) {
+	currentArray = [inputList.value];
+  if (inputList.rest) {
+    currentArray = currentArray.concat(listToArray(inputList.rest));
+  }
+  return currentArray;
+}
+
+console.log(listToArray({value: 1, rest: {value: 2, rest: {value:3, rest: null}}}))
+
+// returns:
+// [1, 2, 3]
+
+function nth(list, nr) {
+	if (nr == 0) {
+    return list.value
+  } else {
+  	return nth(list.rest, nr-1)
+  }
+}
+
+console.log(nth({value: 1, rest: {value: 2, rest: {value:3, rest: null}}},1))
+
+// returns:
+// 2
 ```
+
+## Exercise: Deep Comparison
+
+### Exercise Description
+
+Write a function `deepEqual` that takes two values and returns true only if they are the same value or are objects with the same properties, where the values of the properties are equal when compared with a recursive call to `deepEqual`. 
+
+To find out whether values should be compared directly (use the `===` for that) or have their properties compared, you can use the `typeof` operator. If it produces `"object"` for both values, you should do a deep comparison. But you have to take on silly exception into account: because of a historical accident, `typeof null` also produces `"object"`.
+
+### My solution (WIP)
+
+```js
+function deepEqual(first, second) {
+	if (typeof(first) === typeof(second)) {
+  	// Are they worth comparing at all?
+    if (typeof(first) === "object") {
+    	// Deep comparison
+      if (first.keys.length == second.key.length) {
+      	for(let i=0; i<keys.length-1; i++) {
+        	return deepEqual(first.keys[i], second.keys[i]);
+        }
+      } else {
+      	// Objects have different sizes
+      	return false;
+      }
+    } else {
+    	// Shallow comparison
+    	return first == second;
+    }
+  } else {
+  	return false;
+  }
+}
+
+console.log(deepEqual(1,1)) // returns true
+console.log(deepEqual(1,2)) // returns false
+console.log(deepEqual([1,2], [1,2]))
+```
+
+
+
 
