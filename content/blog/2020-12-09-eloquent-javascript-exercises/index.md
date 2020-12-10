@@ -5,7 +5,7 @@ date: "2020-12-09"
 published: true
 ---
 
-*Last update: December 9th, 2020*
+*Last update: December 10th, 2020*
 
 # Chapter 4: Data Structures: Objects and Arrays
 
