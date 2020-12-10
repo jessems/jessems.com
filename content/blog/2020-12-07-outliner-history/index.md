@@ -9,7 +9,7 @@ redirects:
   - "/outliner-history"
 ---
 
-*Last update: December 9th, 2020*
+*Last update: December 10th, 2020*
 
 This is a chronological overview of outlining software applications. I will be updating this list incrementally.
 
@@ -128,8 +128,6 @@ Version 1.3 was bundled with Living Videotext's MORE in 1987.
 
 ## Screenshots
 
-![](images/acta.png)
-![](images/acta-2.png)
 ![](images/acta-3.png)
 
 ## More Reading
@@ -140,7 +138,7 @@ https://archive.vn/AGWFc
 
 ## Summary
 
-Ecco Pro was a personal information manager software based on an outliner, and supporting folders similar to spreadsheet columns that allow filtering and sorting of information based upon user defined criteria. It was seen to have an easier learning curve than GrandView.
+Ecco Pro was a personal information manager software based on an outliner, and supporting folders similar to spreadsheet columns that allow filtering and sorting of information based upon user defined criteria. It was seen to have an easier learning curve than GrandView. At the same time, its novel and complicated mix of features may have prevented it from gaining mainstream adoption.
 
 ## Lifetime
 
@@ -148,7 +146,7 @@ Ecco Pro was a personal information manager software based on an outliner, and s
 
 ## Screenshots
 
-![](images/ecco-pro.png)
+![](images/ecco-pro-2.png)
 
 ## Features
 
@@ -164,12 +162,13 @@ http://archive.today/2020.12.09-052442/https://www.theguardian.com/technology/20
 https://en.wikipedia.org/wiki/Ecco_Pro
 https://www.mind-mapping.org/index.php?title=ECCO_Pro
 http://archive.today/2020.12.09-060302/http://www.fredshack.com/docs/pim.html
+http://archive.today/2020.12.10-045221/https://medium.com/@rice.doug/ecco-pro-in-the-90s-outlook-not-so-good-a5542ee440d7
 
 # Action Outline (Windows, 2000-2012)
 
 ## Summary
 
-Basic Windows outliner
+Simple two-pane outliner for Windows with a tree-like file explorer pane combined with a document viewer pane. 
 
 ## Developer
 
@@ -179,9 +178,36 @@ Green Parrots Software
 
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FSqsgwo-OMv.png?alt=media&token=72aa4cce-9929-49b3-ad6b-5b080baf6c23)
 
+## Features
+
+- Basic outliner features
+- Ability to minimize to the Windows System Tray and easily pop up to paste a piece of text
+- Tabbed interface for opening multiple documents
+- Different text styling options
+- Tags
+- Printing
+- Rich media inside outlines (Images)
+
+## More reading
+
+http://archive.today/2020.12.10-052846/https://www.actionoutline.com/
+
 # Opal (Mac, 2006-)
 
 ## Summary
+
+A succesor to Acta from its creator David Dunham. 
+
+## Screenshots
+
+![](images/opal.png)
+
+## Features
+
+- Basic outliner features
+- Checkboxes
+- Formatting
+- Search
 
 ## More Reading
 
@@ -204,6 +230,14 @@ Discontinued
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FJwlFMKw9wR.png?alt=media&token=5f06eddd-e2b4-400d-9c34-b99c23a847cd)
 
 ## More Reading
+
+# UV Outliner (Windows)
+
+# VisualOutliner (Windows)
+
+## More Reading
+
+https://www.visualoutliner.com/
 
 # InfoQube
 
@@ -274,13 +308,21 @@ Active
 
 # Vim Outliner
 
+# Mindomo (Web-based)
+
+## More Reading
+
+https://www.mindomo.com/
+
 # Little Outliner (Web-based)
 
 # Workflowy (Web-based)
 
 # Dynalist (Web-based)
 
-# Roam Research
+# Checkvist (Web-based)
+
+# Roam Research (Web-based)
 
 # LeoEditor
 
