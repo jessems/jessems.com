@@ -32,6 +32,7 @@ Write a function `arrayToList` that builds up a list structure like the one show
 
 
 ### My solution
+[fiddle](https://jsfiddle.net/jessems/erunjc8g/)
 
 ```js
 function arrayToList(inputArray) {
@@ -98,28 +99,41 @@ Write a function `deepEqual` that takes two values and returns true only if they
 To find out whether values should be compared directly (use the `===` for that) or have their properties compared, you can use the `typeof` operator. If it produces `"object"` for both values, you should do a deep comparison. But you have to take on silly exception into account: because of a historical accident, `typeof null` also produces `"object"`.
 
 ### My solution (WIP)
+[fiddle](https://jsfiddle.net/jessems/erunjc8g/)
 
 ```js
 function deepEqual(first, second) {
-	if (typeof(first) === typeof(second)) {
-  	// Are they worth comparing at all?
-    if (typeof(first) === "object") {
-    	// Deep comparison
-      if (first.keys.length == second.key.length) {
-      	for(let i=0; i<keys.length-1; i++) {
-        	return deepEqual(first.keys[i], second.keys[i]);
-        }
-      } else {
-      	// Objects have different sizes
-      	return false;
-      }
-    } else {
-    	// Shallow comparison
-    	return first == second;
-    }
-  } else {
-  	return false;
-  }
+	console.log('Comparing: ', first, second);
+	if (typeof(first) === typeof(second) && typeof(first) === "object") {
+		if(first !== null) {
+			// Both are objects and not null. Loop over the key-values
+			let keysFirst = Object.keys(first);
+			let keysSecond = Object.keys(second);
+			if (keysFirst.length === keysSecond.length) {
+				for (i=0; i<=keysFirst.length-1; i++) {
+					// Compare each key-value pair
+					if (keysSecond.includes(keysFirst[i])) {
+						// The key exists in both. Compare the value
+						return deepEqual(first[keysFirst[i]],second[keysFirst[i]])
+					} else {
+						console.log(`Key ${keysFirst[i]} doesn't exist in `, keysSecond);
+						return false;
+					}
+				}
+			} else {
+				// Both are objects, but with different key lengths
+				console.log('Both are objects but with different lengths')
+				return false;
+			}
+		} else {
+			// Both are null
+			console.log('Both are null');
+			return true;
+		}
+	} else {
+		// Both are not objects. Do a shallow comparison
+		return first === second
+	}
 }
 
 console.log(deepEqual(1,1)) // returns true
