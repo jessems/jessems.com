@@ -32,7 +32,7 @@ Write a function `arrayToList` that builds up a list structure like the one show
 
 
 ### My solution
-[fiddle](https://jsfiddle.net/jessems/erunjc8g/)
+[codepen](https://codepen.io/jessems/pen/OJRbKLg)
 
 ```js
 function arrayToList(inputArray) {
@@ -99,46 +99,46 @@ Write a function `deepEqual` that takes two values and returns true only if they
 To find out whether values should be compared directly (use the `===` for that) or have their properties compared, you can use the `typeof` operator. If it produces `"object"` for both values, you should do a deep comparison. But you have to take on silly exception into account: because of a historical accident, `typeof null` also produces `"object"`.
 
 ### My solution (WIP)
-[fiddle](https://jsfiddle.net/jessems/erunjc8g/)
+[codepen](https://codepen.io/jessems/pen/LYRbKqP)
 
 ```js
-function deepEqual(first, second) {
-	console.log('Comparing: ', first, second);
-	if (typeof(first) === typeof(second) && typeof(first) === "object") {
-		if(first !== null) {
-			// Both are objects and not null. Loop over the key-values
-			let keysFirst = Object.keys(first);
-			let keysSecond = Object.keys(second);
-			if (keysFirst.length === keysSecond.length) {
-				for (i=0; i<=keysFirst.length-1; i++) {
-					// Compare each key-value pair
-					if (keysSecond.includes(keysFirst[i])) {
-						// The key exists in both. Compare the value
-						return deepEqual(first[keysFirst[i]],second[keysFirst[i]])
-					} else {
-						console.log(`Key ${keysFirst[i]} doesn't exist in `, keysSecond);
-						return false;
-					}
-				}
-			} else {
-				// Both are objects, but with different key lengths
-				console.log('Both are objects but with different lengths')
-				return false;
-			}
+function deepEqual(first, second, indentation='') {
+	if (typeof first === typeof second) {
+		if (typeof first === "object") {
+      if (first !== null) {
+        firstKeys = Object.keys(first);
+        secondKeys = Object.keys(second);
+        if (firstKeys.length == secondKeys.length) {
+          trackInequalities = [];
+          for (i=0; i<=firstKeys.length-1; i++) {
+            trackInequalities.push(deepEqual(first[firstKeys[i]],second[secondKeys[i]], '    '));
+          }
+          return !trackInequalities.includes(false)
+        } else {
+          // Different amount of keys
+          return false;
+        }  
+      } else {
+        // Both are null
+        return true; 
+      }
 		} else {
-			// Both are null
-			console.log('Both are null');
-			return true;
+			return first === second
 		}
 	} else {
-		// Both are not objects. Do a shallow comparison
-		return first === second
+		return false;
 	}
 }
 
-console.log(deepEqual(1,1)) // returns true
-console.log(deepEqual(1,2)) // returns false
-console.log(deepEqual([1,2], [1,2]))
+function test(assertion, expected, actual) {
+  console.log(assertion, expected === actual ? 'OK' : 'FAILED')
+}
+
+test('Shallow deepEqual with same identities should yield true', true, deepEqual(1,1))
+test('Shallow deepEqual with different identities should yield false', false, deepEqual(1,2))
+test('Deep deepEqual with same identities should yield true', true, deepEqual({value: 'test', rest: {value: 'test2', rest: null}}, {value: 'test', rest: {value: 'test2', rest: null}}))
+test('Deep deepEqual with different identities should yield false', false, deepEqual({value: 'test', rest: {value: 'test2', rest: null}}, {value: 'test', rest: {value: 'diff', rest: null}}))
+test('Deep deepEqual with identical objects containing arrays should yield true', true, deepEqual({value: 'test', rest: ['test', 'test2', 'test3']}, {value: 'test', rest: ['test', 'test2', 'test3']}))
 ```
 
 
