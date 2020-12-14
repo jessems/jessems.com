@@ -67,6 +67,35 @@ Macintosh
 
 ![](images/more-outliner.png)
 
+
+
+# KAMAS ("CP/M"/DOS, 1984-1993)
+
+## Summary
+
+The first outliner for the CP/M with basic keyboard driven outlining capabilities and an internal programming language. Probably the first outliner to introduce the convention of indenting out outdenting with tab and shift+tab respectively. The DOS version shipped without the internal programming language.
+
+## Screenshots
+
+![](images/kamas.png)
+
+## More Reading
+
+https://web.archive.org/web/20020321122910/https://www.jlarue.com/outlinersredux.html
+https://en.wikipedia.org/wiki/KAMAS_(program)
+http://archive.today/2020.05.31-144922/http://blog.fogus.me/2020/05/20/8-bit-spiritua/
+
+# Out-Think (DOS, 1986)
+
+## Summary
+
+Simplified version of KAMAS without its programming facilities.
+
+## More Reading
+
+https://archive.org/stream/PROFILES_Volume_4_Number_1_1986-07_Kaypro_Corp_US#page/n19/mode/2up
+https://en.wikipedia.org/wiki/KAMAS_(program)
+
 # PC-Outline (DOS, 1987)
 
 ## Summary
@@ -163,6 +192,8 @@ https://en.wikipedia.org/wiki/Ecco_Pro
 https://www.mind-mapping.org/index.php?title=ECCO_Pro
 http://archive.today/2020.12.09-060302/http://www.fredshack.com/docs/pim.html
 http://archive.today/2020.12.10-045221/https://medium.com/@rice.doug/ecco-pro-in-the-90s-outlook-not-so-good-a5542ee440d7
+https://web.archive.org/web/20080205164526/http://www.thenakedpc.com/dan/pims/ecco.html
+https://web.archive.org/web/20080202162758/http://www.eccorocks.com/
 
 # Action Outline (Windows, 2000-2012)
 
@@ -213,11 +244,11 @@ A succesor to Acta from its creator David Dunham.
 
 http://archive.today/2020.12.08-074855/http://a-sharp.com/acta/history.html
 
-# ConnectedText (Windows, 2011-2016)
+# ConnectedText (Windows, 2011-2016 [Discontinued])
 
 ## Summary
 
-Personal Wiki, very basic editor. Generate graphs on a page and being able to embed Python scripts that run on the page. A document with an outline view is one of ConnectedText's features.
+ConnectedText brands itself as a "Personal Wiki". It has a very basic editor with an outliner option. It was somewhat unique in that it was one of the first PIM tools to generate a visual graph representation of your notes. There's also the ability to embed Python scripts that run on the page.
 
 ## Status
 
@@ -225,11 +256,14 @@ Discontinued
 
 ## Screenshots
 
-![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FKmU2abYgKV.png?alt=media&token=6b6327ea-1669-47a9-b7d4-38ed79ce7a09)
+![](images/connectedtext-1.png)
 
-![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FJwlFMKw9wR.png?alt=media&token=5f06eddd-e2b4-400d-9c34-b99c23a847cd)
+![](images/connectedtext-2.png)
 
 ## More Reading
+
+https://www.connectedtext.com/
+https://web.archive.org/web/20190421085255/http://takingnotenow.blogspot.com/search/label/ConnectedText
 
 # UV Outliner (Windows)
 
@@ -281,12 +315,24 @@ Active
 
 ## Screenshots
 
-![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FHg3jvMOnrH.png?alt=media&token=603958ce-ce8b-4390-b05c-d5484d972715)
+![](images/myinfo.png)
+
+# Features
+
+- Basic outliner functionality
+- Multiple columns
+- Formatting
+- Embedding PDFs
+- Transclusion
+- Templates
 
 ## More Reading
 
 - https://en.wikipedia.org/wiki/MyInfo
 - http://www.loosewireblog.com/2006/03/an_outliner_tha.html
+- https://www.bitsdujour.com/software/myinfo
+- https://manual.myinfoapp.com
+- http://archive.today/2020.12.12-061630/https://pauljmiller.wordpress.com/2018/10/23/a-comparative-review-of-four-note-taking-programs/
 
 # Accordia IT
 
@@ -298,6 +344,12 @@ Active
 
 # UltraRecall
 
+# Cherry Tree
+
+## More Reading
+
+https://www.giuspen.com/cherrytree/
+
 # Jot+
 
 # TreePad
@@ -305,6 +357,12 @@ Active
 # Inspiration
 
 # The Brain
+
+# The Archive
+
+## More Reading
+
+
 
 # Vim Outliner
 
