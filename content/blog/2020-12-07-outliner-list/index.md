@@ -153,7 +153,7 @@ https://books.google.ch/books?id=Eq0wALnyM_MC&q=%22grandview%22+%22friend%22+out
 
 ## Summary
 
-Version 1.3 was bundled with Living Videotext's MORE in 1987.
+Version 1.3 was bundled with Living Videotext's MORE in 1987 and Acta evolved into Opal.
 
 ## Screenshots
 
@@ -162,6 +162,7 @@ Version 1.3 was bundled with Living Videotext's MORE in 1987.
 ## More Reading
 
 https://archive.vn/AGWFc
+http://archive.today/2020.12.08-073941/http://a-sharp.com/acta/
 
 # ECCO Pro (Windows, 1993-1997)
 
