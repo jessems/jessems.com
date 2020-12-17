@@ -169,3 +169,45 @@ Write a higher-order function `loop` that provides something like a `for` loop s
 
 When defining the function, you can use a regular loops to do the actual looping.
 
+```js
+function loop(value, testFunction, updateFunction, bodyFunction) {
+  console.log(value);
+  for(i=value; testFunction(i); i=updateFunction(i)) {
+    bodyFunction(i);
+  }
+}
+
+loop(0, i=>i<=10, i=>++i, console.log); // Returns 1-10
+```
+
+## Exercise: Everything
+
+Implement every as a function that takes an array and a predicate function as parameters. Write two versions, one using a loop and one using the `some` method.
+
+```js
+// Using a loop
+function every(inputArray, predicate) {
+  trackInequality = [];
+  for (let el of inputArray) {
+    if (!predicate(el)) {
+      trackInequality.push(true)
+    }
+  }
+  if (trackInequality.length > 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+console.log(every([1,2,3,4,5], x=>x<10)) // returns true
+console.log(every([6,7,8,9,10], x=>x<10)) // returns false
+
+// Using the some method
+function everySome(inputArray, predicate) {
+  return inputArray.some(predicate);
+}
+
+console.log(everySome([1,2,3,4,5], x=>x>=10)) // returns false
+console.log(everySome([6,7,8,9,10], x=>x>=10)) // returns true
+```
