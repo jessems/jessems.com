@@ -145,6 +145,8 @@ test('Deep deepEqual with identical objects containing arrays should yield true'
 
 ## Exercise: Flattening
 
+[codepen](https://codepen.io/jessems/pen/XWjMMRO)
+
 Use the `reduce` method in combination with the `concat` method to "flatten" an array of arrays into a single array that has all the elements of the original arrays.
 
 ```js
@@ -165,6 +167,8 @@ console.log(flatten(a)); // returns ["1, "2", "3", "4"]
 
 ## Exercise: Your own loop
 
+[codepen](https://codepen.io/jessems/pen/XWjMMRO)
+
 Write a higher-order function `loop` that provides something like a `for` loop statement. It takes a value, a test function, an update function, and a body function. Each iteration, it first runs the test function on the current loop value and stops if that returns false. Then it calls the body function, giving it the current value. Finally, it calls the update function to create a new value and starts from the beginning.
 
 When defining the function, you can use a regular loops to do the actual looping.
@@ -181,6 +185,8 @@ loop(0, i=>i<=10, i=>++i, console.log); // Returns 1-10
 ```
 
 ## Exercise: Everything
+
+[codepen](https://codepen.io/jessems/pen/XWjMMRO)
 
 Implement every as a function that takes an array and a predicate function as parameters. Write two versions, one using a loop and one using the `some` method.
 
@@ -213,6 +219,8 @@ console.log(everySome([6,7,8,9,10], x=>x>=10)) // returns true
 ```
 
 ## Exercise: Dominant writing direction
+
+[codepen](https://codepen.io/jessems/pen/XWjMMRO)
 
 Write a function that computes the dominant writing direction in a string of text. Remember that each script object has a direction property that can be "ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).
 
