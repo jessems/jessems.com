@@ -294,3 +294,87 @@ Write a class called `Group` (since `Set` is already taken). Like `Set`, it has 
 Use the `===` operator, or something equivalent such as `indexOf`, to determine whether two values are the same.
 
 Give the class a static `from` method that takes an iterable object as argument and creates a group that contains all the values produced by iterating over it.
+
+```js
+class Group {
+  constructor() {
+    this.group = [];
+    return this;
+  }
+    
+  add(value) {
+    if (!this.has(value)) {
+      this.group.push(value);
+      return this;
+    }
+  }
+  
+  delete(value) {
+    if (this.has(value)) {
+      this.group = this.group.filter(x => x !== value)
+      return this;
+    }
+  }
+  
+  has(value) {
+    return this.group.includes(value)
+  }
+  
+  from(iterableObject) {
+    for (let value of iterableObject) {
+      this.add(value);
+    }
+    return this;
+  }
+}
+```
+
+## Exercise: Iterable Groups
+
+Make the `Group` class from the previous exercise iterable. Refer to the section about the iterator interface earlier in the chapter if you aren't clear on the exact form of the interface anymore.
+
+```js
+class GroupIterator {
+  constructor(group) {
+    this.x = 0;
+    this.group = group.group;
+  }
+  
+  next() {
+    if (this.x === this.group.length) return {done: true};
+    
+    let value = this.group[this.x];
+    this.x++
+    
+    return {value, done: false}
+  }
+}
+
+Group.prototype[Symbol.iterator] = function() {
+  return new GroupIterator(this);
+}
+
+for (let el of group.from([4,5,6])) {
+  console.log(el); // Returns 4 \ 5 \ 6
+}
+```
+
+## Exercise: Borrowing a Method
+
+Can you think of a way to call `hasOwnProperty` on an object that has its own property by that name?
+
+```js
+class MyObject {
+  constructor() {
+  }
+  
+  hasOwnProperty(thisVarWillBeIgnored) {
+    console.log("I do what I want");
+  }
+}
+
+let myObject = new MyObject("hopeful");
+
+myObject.hasOwnProperty('test'); // returns "I do what I want"
+console.log(Object.hasOwnProperty.call(this,'test'));  // returns false
+```
