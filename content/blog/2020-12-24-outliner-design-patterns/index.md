@@ -25,7 +25,7 @@ Nested items can be promoted or demoted in the hierarchy, usually by adjusting t
 
 Collapsing is the affordance of allowing the user to hide an items subordinate items, only displaying the top-level item. Usually this is paired with some type of state change in the top level's icon indicating that it contains hidden subordinate items.
 
-## Hierarchy-based automtatic styling
+## Hierarchy-based automatic styling
 
 ### Problem
 
@@ -39,17 +39,19 @@ We might want to convey structure or emphasis using conventional text styling (e
 
 ### Solution
 
-Some outliners include options for changing the font size and tex decoration irrespective of the outline level.
+Some outliners include options for changing the font size and text decoration irrespective of the outline level.
 
 ## Inline Notes
 
 ### Problem
 
-We want to include comment about the information contained within an entity without 
+We want to include a comment or meta-information about an item within the outline without manipulating the item itself or adding content within the outline.
 
 ### Solution
 
+Afford the user the option to add a meta-level comment on each item across the hierarchy.
 
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F9bgqy3bB20.png?alt=media&token=18487f11-9774-4e6f-98ea-ce23b7405be9)
 
 ## Multiple entities
 
@@ -57,21 +59,39 @@ We want to include comment about the information contained within an entity with
 
 Having only one type of entity to be used in the hierarchy can be limiting.
 
-Solution
+### Solution
 
+Allow for multiple entities to be used in the hierarchy. The Mac Finder, for example, allows you to use folders and files. A file can live inside a folder, but nothing can live inside a file.
 
+### Examples
+
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4hxzmOytfU.png?alt=media&token=e1121339-e5e4-4cdc-ac54-6826c8fe8c0f)
+
+Example from Dynalist where they use Folders and Documents as the two entities. Documents can live inside/underneath Folders, but not underneath other Documents.
 
 ## Outlines within outlines
 
 ### Problem
 
-One or two layers of hierarchy might be not be enough to accurately model 
+A small amount of allowed hierarchy levels may not be enough to fully represent some information.
+
+### Solution
+
+Allow infinite levels of outlining.
+
+### Examples
+
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FO2P5KmG1bA.png?alt=media&token=42742fd8-0a90-48cc-90a8-7877976bd0ec)
 
 ## Finder integration
 
 ### Problem
 
-Within a tree / file cabinet metaphor, the note entities are stored at a location within some abstraction. The file system and the explorer / finder are the default paradigms for navigating the file cabinet. We want to be able to view and manipulate the highest level of our tree.
+Within a tree / file cabinet metaphor, the note entities are stored at a location within some abstraction. The file system and the explorer / finder are the default paradigms for navigating files across platforms. Allowing for manipulation of the hierarchy's highest level, therefor, amounts to manipulating individual files. Manipulation at the file-level, however, may not be something that is afforded to the user.
+
+### Solution
+
+Integrate the file-level view into the outliner.
 
 ## Meta-outlines (Outlines __about__ outlines)
 
@@ -93,7 +113,7 @@ Folding limits the space a line takes up to 1 line by truncating it.
 
 ### Problem
 
-A hierarchical or textual view of our notes often doesn't give us the perspective or insight we need.
+A hierarchical or textual view of our notes often doesn't give us the perspective or context necessary.
 
 ## Clippers
 
@@ -101,9 +121,11 @@ A hierarchical or textual view of our notes often doesn't give us the perspectiv
 
 We want to be able to take information we find outside of our note taking tool and bring it into our notes.
 
+### Solution
 
+Use a separate tool or a browser extension to "clip" content and send it back to the outliner.
 
-## "Integrated Multilevels"
+## Integrated Multilevels
 
 Ability to promote and demote between outline items and the note header
 
@@ -154,6 +176,3 @@ A location in the outline can be hoisted, which displays the item and its subord
 http://archive.today/2020.12.12-062347/http://www.atpm.com/9.10/atpo.shtml
 
 http://archive.today/2020.12.12-061939/http://www.atpm.com/9.11/atpo.shtml
-
-
-
