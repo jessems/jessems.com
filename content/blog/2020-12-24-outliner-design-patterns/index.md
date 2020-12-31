@@ -9,7 +9,7 @@ published: true
 
 *This is a working document*
 
-*Last updated 2020-12-24*
+*Last updated 2020-12-31*
 
 ## Nesting, Promote/Demote, Collapsing (Basic Outliner Features)
 
@@ -51,7 +51,7 @@ We want to include a comment or meta-information about an item within the outlin
 
 Afford the user the option to add a meta-level comment on each item across the hierarchy.
 
-![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F9bgqy3bB20.png?alt=media&token=18487f11-9774-4e6f-98ea-ce23b7405be9)
+![Example of an inline note from Dynalist](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F9bgqy3bB20.png?alt=media&token=18487f11-9774-4e6f-98ea-ce23b7405be9)
 
 ## Multiple entities
 
@@ -65,9 +65,7 @@ Allow for multiple entities to be used in the hierarchy. The Mac Finder, for exa
 
 ### Examples
 
-![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4hxzmOytfU.png?alt=media&token=e1121339-e5e4-4cdc-ac54-6826c8fe8c0f)
-
-Example from Dynalist where they use Folders and Documents as the two entities. Documents can live inside/underneath Folders, but not underneath other Documents.
+![Example from Dynalist where they use Folders and Documents as the two entities. Documents can live inside/underneath Folders, but not underneath other Documents.](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4hxzmOytfU.png?alt=media&token=e1121339-e5e4-4cdc-ac54-6826c8fe8c0f)
 
 ## Outlines within outlines
 
@@ -127,7 +125,15 @@ Use a separate tool or a browser extension to "clip" content and send it back to
 
 ## Integrated Multilevels
 
-Ability to promote and demote between outline items and the note header
+### Problem
+
+Sometimes a sub-item warrants a separate entity with its own outline, or conversely, sometimes the header of a note is better suited as a sub-item of another.
+
+### Solution
+
+Ability to promote and demote between outline items and the note header.
+
+![Example of integrated multilevels from Keynote](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2Fecg_8BwMC-.gif?alt=media&token=1f834657-8cb8-4a2d-aad4-c636e262ef0d)
 
 ## Embedding external content
 
@@ -161,6 +167,8 @@ You want to perform an operation on a non contiguous group of items.
 
 Allow the user to search for items that match certain criteria, which results in a selection which can then be moved or promoted / demoted.
 
+![Group operations example from Workflowy](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FjDlxTkiwo2.gif?alt=media&token=65c95ff8-48f6-487d-8cf8-1a1b24e2fd15)
+
 ## Hoisting
 
 ### Problem
@@ -169,7 +177,9 @@ You want to work on part of an outline without experiencing the distractions and
 
 ### Solution
 
-A location in the outline can be hoisted, which displays the item and its subordinates as if they were the only items in the outline.
+A location in the outline can be "hoisted", which displays the item and its subordinates as if they were the only items in the outline.
+
+![Example of hoisting from Workflowy](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FDG-9ZtW3qm.gif?alt=media&token=a8a9611e-e410-4910-b76c-bebf63793857)
 
 ### References
 
