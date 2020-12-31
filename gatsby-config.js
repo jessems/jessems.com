@@ -52,6 +52,10 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-figure-caption`,
+            options: {figureClassName: 'md-figure'},
+          },
+          {
             resolve: `gatsby-remark-embedder`,
             options: {
               customTransformers: [
@@ -156,6 +160,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-twitter'
+    'gatsby-plugin-twitter',
   ],
 }
