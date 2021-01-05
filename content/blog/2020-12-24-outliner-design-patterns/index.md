@@ -15,15 +15,17 @@ published: true
 
 ### Problem
 
-We want to be able to easily view, navigate and manipulate the hierarchy of a collection of items. Classical word outliners only offer a linear model.
+We want to be able to easily view, navigate and manipulate the hierarchy of a collection of items. Classical word processors only offer a linear display of the text.
 
 ### Solution
+
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F_38UBtAxou.gif?alt=media&token=1bc5167b-d202-4358-ad74-db09e4df1171)
 
 Nesting is the affordance of putting something in or under something else and having it displayed as a subordinate of that item, usually through indentation. Classically windows would display such a relationship with a plus and mac with an arrow.
 
 Nested items can be promoted or demoted in the hierarchy, usually by adjusting their indentation accordingly. Modern outliners allow this to be done through the Tab and Shift + Tab keyboard shortcuts.
 
-Collapsing is the affordance of allowing the user to hide an items subordinate items, only displaying the top-level item. Usually this is paired with some type of state change in the top level's icon indicating that it contains hidden subordinate items.
+Collapsing is the affordance of allowing the user to hide an item's subordinate items, only displaying the top-level item. Usually this is paired with some type of state change in the top level's icon indicating that it contains hidden subordinate items.
 
 ## Hierarchy-based automatic styling
 
@@ -53,7 +55,7 @@ Some outliners include options for changing the font size and text decoration ir
 
 ### Problem
 
-We want to include a comment or meta-information about an item within the outline without manipulating the item itself or adding content within the outline.
+We want to include a comment or meta-information about an item within the outline without editing the item's contents itself.
 
 ### Solution
 
@@ -65,15 +67,23 @@ Afford the user the option to add a meta-level comment on each item across the h
 
 ### Problem
 
-Having only one type of entity to be used in the hierarchy can be limiting.
+Having only one type of entity at their disposal prevents a user from structuring their notes hierarchically or by delineating between different classes of entities.
 
 ### Solution
 
-Allow for multiple entities to be used in the hierarchy. The Mac Finder, for example, allows you to use folders and files. A file can live inside a folder, but nothing can live inside a file.
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FIXsQxJDt6j.png?alt=media&token=49192278-2d40-4e96-b6b6-bac661dec5ed)
 
-### Examples
+Allow for multiple entities to be used in the hierarchy. The Mac Finder, for example, allows you to use folders and files. A file can live inside a folder,  nothing can live inside a file and different types of files exist.
 
-![Example from Dynalist where they use Folders and Documents as the two entities. Documents can live inside/underneath Folders, but not underneath other Documents.](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4hxzmOytfU.png?alt=media&token=e1121339-e5e4-4cdc-ac54-6826c8fe8c0f)
+## Additional columns
+
+### Problem
+
+The entity in the outline might have additional attributes that cannot be displayed in the outline itself.
+
+### Solution
+
+Afford the user the ability to add additional columns to the outline to display otherwise hidden attributes.
 
 ## Outlines within outlines
 
@@ -89,13 +99,15 @@ Allow infinite levels of outlining.
 
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FO2P5KmG1bA.png?alt=media&token=42742fd8-0a90-48cc-90a8-7877976bd0ec)
 
-## Finder integration
+## File explorer
 
 ### Problem
 
 Within a tree / file cabinet metaphor, the note entities are stored at a location within some abstraction. The file system and the explorer / finder are the default paradigms for navigating files across platforms. Allowing for manipulation of the hierarchy's highest level, therefor, amounts to manipulating individual files. Manipulation at the file-level, however, may not be something that is afforded to the user.
 
 ### Solution
+
+![Example from Dynalist where they use Folders and Documents as the two entities. Documents can live inside/underneath Folders, but not underneath other Documents.](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4hxzmOytfU.png?alt=media&token=e1121339-e5e4-4cdc-ac54-6826c8fe8c0f)
 
 Integrate the file-level view into the outliner.
 
@@ -135,7 +147,7 @@ Use a separate tool or a browser extension to "clip" content and send it back to
 
 ### Problem
 
-Sometimes a sub-item warrants a separate entity with its own outline, or conversely, sometimes the header of a note is better suited as a sub-item of another.
+Sometimes a sub-item warrants a separate entity with its own outline, or conversely, sometimes the header of a note is better suited as a sub-item of another. When a note's title isn't part of the hierarchy, it becomes cumbersome to demote it to a bullet point.
 
 ### Solution
 
