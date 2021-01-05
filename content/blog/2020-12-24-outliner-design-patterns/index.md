@@ -9,7 +9,7 @@ published: true
 
 *This is a working document*
 
-*Last updated 2020-12-31*
+*Last updated 2020-01-05*
 
 ## Nesting, Promote/Demote, Collapsing (Basic Outliner Features)
 
@@ -29,15 +29,23 @@ Collapsing is the affordance of allowing the user to hide an items subordinate i
 
 ### Problem
 
-It is difficult to see the structure of the hierarchy by indentation alone.
+It is difficult to discern the structure of the hierarchy represented by the outline through indentation alone. Applying styling which is consistent across outline levels can help emphasize the structure, but can be tedious to apply when each level needs to be styled independently.
 
-## Hierarchy-independent Styling
+### Solution
+
+![Example of hierarchy-based styling in OmniOutliner Pro](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2F4wC0s5gUM3.png?alt=media&token=99429b44-dcc0-4003-8dbf-75bf0c83c788)
+
+Afford the user the option to define styles on a heading level. This is similar to what we're used to seeing in word processors, but isn't often seen in outliners.
+
+## Hierarchy-independent manual styling
 
 ### Problem
 
-We might want to convey structure or emphasis using conventional text styling (e.g. H1, H2)
+We might want to convey a structure within our outline, through styling, which doesn't map onto the hierarchy (and possible hierarchy-based styling).
 
 ### Solution
+
+![Hierarchy-independent styling in OmniOutliner Pro](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FzVXZdLy5qZ.png?alt=media&token=070e1795-b485-4419-ba08-b2490058f4d6)
 
 Some outliners include options for changing the font size and text decoration irrespective of the outline level.
 
@@ -147,6 +155,14 @@ We want to link to external resources.
 
 We want to be able to indicate that two ideas are connected and easily navigate between the two within our notes.
 
+### Solution
+
+![Internal linking done in Workflowy](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2Fme-SvwHahN.gif?alt=media&token=0e8c2e79-1331-4ab6-a85c-11821ad8a495)
+
+Afford the user the ability to link to an item within the existing outline (or another outline if supported).
+
+Identifying the location to be linked to can become cumbersome in and of itself. Other outliners have implemented Media-Wiki-style link auto-suggestions to aid in the process.
+
 ## Clones
 
 ### Problem
@@ -169,7 +185,7 @@ Allow the user to search for items that match certain criteria, which results in
 
 ![Group operations example from Workflowy](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fjessems-second-brain%2FjDlxTkiwo2.gif?alt=media&token=65c95ff8-48f6-487d-8cf8-1a1b24e2fd15)
 
-## Hoisting
+## Hoisting / Zooming
 
 ### Problem
 
