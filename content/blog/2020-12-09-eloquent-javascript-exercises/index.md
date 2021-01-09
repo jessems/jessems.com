@@ -378,3 +378,133 @@ let myObject = new MyObject("hopeful");
 myObject.hasOwnProperty('test'); // returns "I do what I want"
 console.log(Object.hasOwnProperty.call(this,'test'));  // returns false
 ```
+
+# Chapter 7
+
+## Exercise: Measuring a Robot
+
+[codepen](https://codepen.io/jessems/pen/yLapeoL)
+
+Write a function `compareRobots` that takes two robots (and their starting memory). It should generate 100 tasks and let each of the robots solve each of these tasks. When done, it should output the average number of steps each robot took per task.
+
+```js
+function compareRobots(robotOne, robotTwo) {
+  robotOneResults = [];
+  robotTwoResults = [];
+  for (let i=0; i<100; i++) {
+    let villageState = VillageState.random();
+    robotOneResults.push(runRobot(villageState, robotOne, []));
+    robotTwoResults.push(runRobot(villageState, robotTwo, []));
+  }
+  console.log(`Robot 1: ${getAverage(robotOneResults)}`);
+  console.log(`Robot 2: ${getAverage(robotTwoResults)}`);
+}
+
+function getAverage(inputArray) {
+  return inputArray.reduce((acc, c) => (acc + c)) / inputArray.length;
+}
+
+compareRobots(goalOrientedRobot, randomRobot); // See codepen or the book for the definition of these robots
+// > Robot 1: 16.69
+// > Robot 2: 92.04
+
+```
+
+## Exercise: Robot Efficiency
+
+[codepen](https://codepen.io/jessems/pen/yLapeoL)
+
+Can you write a robot that finishes the task faster than `goalOrientedRobot`? If you observe that robot's behavior, what obviously stupid thing does it do? How could those be improved?
+
+### My Answer
+
+Here's `goalOrientedRobot`:
+
+```js
+function goalOrientedRobot({place, parcels}, route) {
+  if (route.length == 0) {
+    let parcel = parcels[0];
+    if(parcel.place != place) {
+      route = findRoute(roadGraph, place, parcel.place);
+    } else {
+      route = findRoute(roadGraph, place, parcel.address);
+    }
+  }
+  return {direction: route[0], memory: route.slice(1)}
+}
+```
+
+One 'stupid' thing that `goalOrientedRobot` does is that when the route array is empty, it determines its next step based on the parcel with index `0` in the `parcels` array. It would probably be more efficient to, instead, determine which parcel is closest to the current location, and start with that one.
+
+```js
+function nearestParcelRobot({place, parcels}, route) {
+  if (route.length == 0) {
+    let parcel = parcels[getNearestParcelIndex(place, parcels)];
+    if(parcel.place != place) {
+      route = findRoute(roadGraph, place, parcel.place);
+    } else {
+      route = findRoute(roadGraph, place, parcel.address);
+    }
+  }
+  return {direction: route[0], memory: route.slice(1)}
+}
+
+
+function getNearestParcelIndex(currentLocation, parcels) {
+  let nearestParcelLocation = '';
+  let shortestRouteSoFar = 99;
+  let index = -1;
+  for (let parcel of parcels) {
+    index++;
+    route = findRoute(roadGraph, currentLocation, parcel.place);
+    if (route.length < shortestRouteSoFar) {
+      shortestRouteSoFar = route.length;
+      console.log(shortestRouteSoFar);
+      indexForShortestRoute = index;
+    }
+  }
+  return indexForShortestRoute;
+}
+
+compareRobots(goalOrientedRobot, nearestParcelRobot);
+// > Robot 1: 17.44
+// > Robot 2: 16.35
+```
+
+## Exercise: Persistent Group
+
+```js
+class PGroup {
+  constructor(inputArray) {
+    this.members = inputArray;
+  }
+  
+  add(value) {
+    if (this.has(value)) return this;
+    return new PGroup([...this.members, value]);
+  }
+  
+  delete(value) {
+    if (!this.has(value)) return this;
+    return new PGroup(this.members.filter(x => x !== value));
+  }
+  
+  has(value) {
+    return this.members.includes(value);
+  }
+  
+}
+
+PGroup.empty = new PGroup([]);
+
+let a = PGroup.empty.add("a");
+let ab = a.add("b");
+let b = ab.delete("a");
+
+console.log(b.has("b"));
+// → true
+console.log(a.has("b"));
+// → false
+console.log(b.has("a"));
+// → false
+```
