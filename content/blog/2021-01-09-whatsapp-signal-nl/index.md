@@ -15,7 +15,7 @@ De incentive van Facebook is in eerste instantie dan ook niet het bevorderen van
 
 Privacy van de user is een "afterthought". Het is alleen belangrijk voor Facebook in de mate waarin het ervoor zorgt dat we het platform niet massaal verlaten. Dit verklaart waarom hun reputatie zo slecht is: het is geen ingebakken prioriteit — en dat zal het nooit zijn (want: incentives).
 
-Met de update van laatst bekent Facebook weer haar echte kleuren. Zonder veel fanfare wordt iedereen medegedeeld dat hun telefoonnummers, telefoonnummers van al hun contacten, profiel namen, profiel foto's, statusberichten, laatst online timestamp en "diagnostische data van app logs" (wat dat ook mag zijn) naar Facebook gestuurd zullen worden en dat zij het mogen delen met hun "family of companies". Dit zijn gegevens die andere apps niet van je verlangen waar je tot nu toe nog bij Whatsapp voor kon opt-out'en . Nu dus niet meer.
+Met de update van laatst bekent Facebook weer haar echte kleuren. Zonder veel fanfare wordt iedereen medegedeeld dat hun telefoonnummers, telefoonnummers van al hun contacten, profiel namen, profiel foto's, statusberichten, laatst online timestamp en "diagnostische data van app logs" (wat dat ook mag zijn) naar Facebook gestuurd zullen worden en dat zij het mogen delen met hun "family of companies". Dit zijn gegevens die andere apps niet van je verlangen en waar je tot nu toe nog bij Whatsapp voor kon opt-out'en . Nu dus niet meer.
 
 Het probleem is in mijn ogen niet zozeer het verhoogde gevaar van deze specifieke datavelden. Ik ging er eigenlijk al vanuit dat de meeste daarvan al gedeeld werd. Dat vond ik bezwaarlijk, maar het alternatief: zelf switchen en/of mensen proberen mee te krijgen leek vooralsnog onbegonnen werk.
 
