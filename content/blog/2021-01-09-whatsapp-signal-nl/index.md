@@ -1,7 +1,7 @@
 ---
 slug: whatsapp-signal-nl
 title: "Waarom we allemaal onze Whatsapp groepen naar Signal zouden moeten verhuizen"
-date: "2021-01-24"
+date: "2021-01-10"
 published: true
 ---
 
@@ -27,4 +27,4 @@ Het alternatief is dat mensen "vote with their feet" en zelf laten merken dat sl
 
 Hoeveel zin heeft het om met een paar groepen de switch te maken, maar om vervolgens Whatsapp geïnstalleerd te laten? Facebook legt daarmee namelijk nog steeds claim op al je contacten. Het enige voordeel lijkt dan te zijn dat ze enige metadata die de verhuisde gesprekken genereren niet meer zullen kunnen registeren. 
 
-Het doel van zo'n verhuizing is kan dan ook niet zijn: het direct terugveroveren van je privacy. Het is een stap in een betere richting en een boodschap dat we niet alles zomaar zullen pikken van een bedrijf dat een hele speciale privilege in onze maatschappij systematisch misbruikt. Als genoeg mensen één been in een nieuw platform als Signal zetten, dan schept dat de mogelijkheid dat er op een gegeven moment zich genoeg kritische massa heeft opgebouwd om de volledige overstap te maken. Maar het begint met een kleine stap.
+Het doel van zo'n verhuizing kan dan ook niet zijn: het direct terugveroveren van je privacy. Het is een stap in een betere richting en een boodschap dat we niet alles zomaar zullen pikken van een bedrijf dat een hele speciale privilege in onze maatschappij systematisch misbruikt. Als genoeg mensen één been in een nieuw platform als Signal zetten, dan schept dat de mogelijkheid dat er op een gegeven moment zich genoeg kritische massa heeft opgebouwd om de volledige overstap te maken. Maar het begint met een kleine stap.
