@@ -8,15 +8,25 @@ keywords: ['privacy', 'whatsapp', 'facebook']
 published: true
 ---
 
+![The Rummaging Hairdresser](hairdresser-analogy.jpg)
+
 *This is a thought exercise to help explore what is okay (and what isn't) when it comes to the exchange between personal information and the provision of a personalised service.*
 
+
+
 Imagine you've moved to a new city and you're in need of a hairdresser to do your hair every other week. Perhaps you try out one or two different ones first, or perhaps you go with a friend's recommendation. Either way, after a short while you've settled on a hair dresser you're happy with. They're professional, they treat you well, they remember your name and you build up a relationship with them over time.
+
+# The more your hairdresser knows about you, the better their service gets
 
 As you visit this hairdresser more often, they gain more experience with your specific hair type, your preferred hair style and your preferred hair products. Perhaps the hairdresser, knowing that you have particularly thick hair, and remembering that you dislike the way it curls around your ears when it gets too long, ensures a shorter cut in those areas by default. Or, perhaps remembering that you’re most happy when your hair has a bouncy look to it, they introduce you to a specific type of wax that helps you achieve that type of effect.
 
 There's a direct relationship here between (1) how much the hairdresser knows about you, and remembers about you, and (2) the quality of the service you receive. The more the hairdresser knows about you, the better the service they can provide. It's convenient to you when you don't have to explain what you want every time you visit. It's valuable to you when your hairdresser knows so much about your hair and your preferences that they're able to suggest things to you you didn't even know you wanted. It can also be nice if they remember the names of your children, or if they ask about that issue you were grappling with at work the last time you stopped by.
 
+# Your hairdresser starts collecting more information
+
 Now imagine it’s time for your regular haircut, so you visit your trusted hairdresser. You sit down in the salon chair, as you've been doing every other week and they tell you they'll be "right with you." As you look into the mirror in front of you, you see them in the reflection walking up to the coat hanger where you've hung up your coat. Having arrived at your coat they start to insert their hand into your coat's pockets one by one. For each pocket they extract its contents (your wallet, your mobile phone, your keys [^1]) and examine each carefully, before placing them back. After having made their way through your entire coat, they return to your chair to finally tend to your needs: "So, what will it be today? The usual?"
+
+# They're just trying to improve their service
 
 In this real-life scenario most people would, at the very least, be astonished but hopefully also a bit angry. You might want to say: "Hey! What are you doing in my coat?" Now imagine their response being "Oh, that's just a new policy we've introduced which helps us improve our service to you. You see," they continue, "as I was examining the items in your coat, I noticed a car key with an Audi logo. One of my friends happens to be an Audi mechanic. I can put you in touch with him, if you're interested, and they can help you if your car ever breaks down. I also made note of the contacts in your phone, and if one of them ever comes in for a haircut, and I'll be sure to give them a special treatment, on the house." [^2]
 
@@ -28,6 +38,8 @@ The only thing that matters here is that your hairdresser has no business rummag
 
 Please remember how this makes you feel. We're going to change some variables in the story and see what happens.
 
+# I didn't agree to this!
+
 Let's go back to our imagined scenario. You feel offended that your hairdresser went through your coat and you say: "Hey man, I didn't agree to that!"
 
 "Oh, I'm sorry" he replies "I didn't mean to offend you. But actually, you did consent to this new policy. You see, there's a sign at the door which says:
@@ -36,9 +48,13 @@ Let's go back to our imagined scenario. You feel offended that your hairdresser 
 
 So by walking through the door, you've actually given your consent." [^5].
 
+# The invisible assistant
+
 Let’s ignore, for the sake of brevity, the issue of whether walking through a door could reasonably constitute giving consent. Imagine instead that you don't catch the hairdresser rummaging through your coat, but instead they tell you their assistant will examine all your belongings while you lie back, close your eyes and have your hair washed by them with lavender shampoo.
 
 Try to notice within yourself: Do you feel less outrage if you're not witnessing the act of someone rummaging through your coat, but you know it's happening? For me it makes it slightly more difficult to "find" the outrage inside of myself. Since I’m not witnessing the act with my own eyes, I need to first imagine it happening before I'm able to perceive any level of outrage. The outrage is still there, but it's become a bit harder to access. It's become a bit more distant if you will.
+
+# The high-tech camera
 
 Let's continue to change variables. Let's imagine there's no assistant but the hairdresser has installed a high tech camera in the room which, without touching your coat and within a microsecond, is able to scan your coat and analyze all its contents. In doing so, it is able to extract the same information the hairdresser and their assistant were able to do when they were doing it themselves. Imagine this takes place in a split second and it happened as you sat down.
 
@@ -46,23 +62,33 @@ Do you feel angry about what just happened? Do you feel less outrage than before
 
 For me, I feel outrage, but it's become less visceral and more intellectual. It's as if I only feel outrage because I’m able to follow a sequence of logical steps to arrive at the conclusion that the outcomes of the camera scan and the physical rummaging are one and the same. That said, without the image of a person with their hands in my coat (imagined or not), it’s more difficult to feel outraged. It’s also harder to feel outraged when the violation is committed by an inanimate object. For one, I'm not sure who to get angry at, and I somehow feel less violated when it's a machine or an algorithm committing the act.
 
+# The invisible technology in the room
+
 Now go one step further and imagine it's not even a high-tech camera doing the scanning, but some unknown technology which you cannot see and do not understand. It’s not located anywhere you can point at, it’s just “there” somewhere in the hairdresser’s salon with you as it scans the contents of your jacket.
 
 Are you able to find any outrage at all this time? 
 
 I can still find it, but it’s even more difficult to find than before. With the camera at least I had something I could focus my anger on (and could potentially smash). Without any identifiable person or object committing these acts, the act itself seems to slowly lose the property of being something one could potentially object to.
 
+# How my outrage circuitry works
+
 My outrage seems to require at a minimum a crime and a perpetrator. I struggle to find those here. Only by invoking the analog equivalent from before and by imagining an actual person committing these acts do I feel outrage. But equating this last scenario to the analog equivalent feels slightly awkward; an oversimplification. As a result, the outrage doesn’t transfer fully from one scenario to the other.
 
 By changing the process through which the information was extracted while keeping the outcome (the extracted data) the same, my outrage circuitry has almost entirely been bypassed. This was achieved by making the scenario more abstract, instantaneous, invisible and by making the actor an inanimate, unidentifiable piece of technology.
+
+# What if we didn't start with the hairdresser?
 
 Now, one final step. Imagine we hadn't started with the analog example of the rummaging hairdresser and the emotional memory of how that made you feel. Imagine instead we would have started with the invisible, instantaneous, inanimate technology. Would you have been able to feel any outrage? Any whatsoever? Would you naturally think of coming up with an analog equivalent scenario to gauge your outrage?
 
 You actually don't need to imagine the last example. If you're currently using WhatsApp, you're living inside of it. The hairdresser represents Facebook and the coat rummaging policy represents their new privacy policy, or Facebook's general conduct for that matter. If you don't feel outrage, then perhaps that's because you haven't imagined the analog equivalent of what's happening yet (which isn't always self-evident, that’s what I’ve tried to help you with here) [^6].
 
+# Outrage is triggered by the how, not the if
+
 The key observation to note here is that the outrage that gets triggered inside of you gets modulated by *the manner in which* your information gets extracted, not so much *if* it gets extracted. It's as if robbing someone of $100 would somehow be less outrageous if you did it through the internet rather than snatching it directly from their wallet.
 
 In a high-tech society, where we’re surrounded by technological abstractions upon abstractions, should we only be relying on our instinctual outrage circuits to be our moral compasses when they can so easily be fooled?
+
+# Final note
 
 *Even though the hairdresser in this story (Facebook / WhatsApp) is rummaging through your coat, there are many reputable hairdressers (messaging services) that do not. My favourite alternative is [Signal](https://signal.org) [^7], but I've heard good things about [Threema](https://threema.ch/) and although I don't get the impression the technology is accessible enough to port my friends and family, I'm supportive of what [Matrix](https://matrix.org/) is trying to accomplish.*
 
