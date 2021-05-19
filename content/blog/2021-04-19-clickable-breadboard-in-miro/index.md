@@ -7,7 +7,7 @@ categories: ['miro', 'design']
 published: true
 ---
 
-I got the idea of breadboards from Ryan Singer in his book Shape Up.
+I got the idea of breadboards from Ryan Singer in his book [Shape Up](https://basecamp.com/shapeup).
 
 Borrowing from the field of electrical engineering, a breadboard is a fully functioning prototype without the industrial design. We can do the same for an interaction idea and choose not to specify any visual design.
 
@@ -31,7 +31,7 @@ One problem with breadboards is that the connection lines can get messy.
 
 ![](images/messy-connections.png)
 
-A slightly different approach is using a Miro board and using its ability to link to objects. Clicking on a link will move the current view to the linked object.
+A slightly different approach is using a [Miro](https://miro.com) board and using its ability to link to objects. Clicking on a link will move the current view to the linked object.
 
 Because Miro zooms into the object that was linked, once you click a link, it can be helpful to link to a frame around the place/location in the breadboard. That way you never zoom in too far.
 
