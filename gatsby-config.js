@@ -52,6 +52,9 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-copy-linked-files'
+          },
+          {
             resolve: `gatsby-remark-figure-caption`,
             options: {figureClassName: 'md-figure'},
           },
