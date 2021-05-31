@@ -37,6 +37,6 @@ Because Miro zooms into the object that was linked, once you click a link, it ca
 
 ![](images/all-locations.png)
 
-Here's a video of how it works in practice.
+Here's a animated gif of how it works in practice.
 
-https://youtu.be/G9ArLvCqPiE
+![](images/breadboard.gif)
