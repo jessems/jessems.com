@@ -15,6 +15,11 @@ const BlogPost = ({ data: { mdx: post } }) => {
           <MDXRenderer>{body}</MDXRenderer>
         </article>
       </div>
+      <div className="flex justify-center w-full">
+        <div>
+          <iframe src="https://jessems.substack.com/embed" width="480" height="200" style={{background: 'white'}} frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
     </Layout>
   )
 }
