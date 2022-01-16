@@ -24,6 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        extensions: [`.md`, `.mdx`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -56,19 +57,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            }
-          }
-        ]
-      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
