@@ -1,9 +1,9 @@
 ---
 slug: how-to-create-a-clickable-breadboard-in-miro
-date: '2021-05-19'
-title: 'How to create a clickable breadboard in Miro'
-description: 'A quick tutorial on how to create a clickable prototype in Miro'
-categories: ['miro', 'design']
+date: "2021-05-19"
+title: "How to create a clickable breadboard in Miro"
+description: "A quick tutorial on how to create a clickable prototype in Miro"
+categories: ["miro", "design"]
 published: true
 ---
 
@@ -36,7 +36,7 @@ A slightly different approach is using a [Miro](https://miro.com) board and usin
 Because Miro zooms into the object that was linked, once you click a link, it can be helpful to link to a frame around the place/location in the breadboard. That way you never zoom in too far.
 
 ![](images/all-locations.png)
- 
-Here's a animated gif of how it works in practice.
 
-![](images/breadboard.gif)
+Here's a video of how it works in practice.
+
+https://youtu.be/G9ArLvCqPiE
