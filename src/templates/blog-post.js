@@ -1,20 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const BlogPost = ({ data: { mdx: post } }) => {
-  const { title } = post.frontmatter;
-  const { body } = post;
+  const { title } = post.frontmatter
+  const { body } = post
   return (
-    <div>
-        <h1>{title}</h1>
-        <MDXRenderer>{body}</MDXRenderer>
-    </div>
-  );
-};
+    <Layout>
+      <div className="container md:max-w-3xl mx-auto">
+        <article className="prose pt-16">
+          <h1>{title}</h1>
+          <MDXRenderer>{body}</MDXRenderer>
+        </article>
+      </div>
+    </Layout>
+  )
+}
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -23,6 +29,6 @@ export const query = graphql`
       body
     }
   }
-`;
+`
 
-export default BlogPost;
+export default BlogPost
