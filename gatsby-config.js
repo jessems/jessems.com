@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Jesse M. Szepieniec (JesseMS)`,
-    description: `Kick off your next, great Gatsby project with this default starter with TailwindCSS and common dev tools. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@kosvrouvas`,
+    title: `Jesse M. Szepieniec`,
+    description: `Developer, Designer and Scientist`,
+    author: `@jessems`,
   },
   flags: {
-    THE_FLAG: false
+    THE_FLAG: false,
   },
   plugins: [
     {
@@ -30,7 +30,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-classes`,
@@ -38,11 +38,11 @@ module.exports = {
               classMap: {
                 // h1: "text-lg text-center",
                 // paragraph: "my-2",
-              }
-            }
-          }
-        ]
-      }
+              },
+            },
+          },
+        ],
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
@@ -107,6 +107,6 @@ module.exports = {
         develop: false,
         tailwind: true,
       },
-    }
+    },
   ],
 }

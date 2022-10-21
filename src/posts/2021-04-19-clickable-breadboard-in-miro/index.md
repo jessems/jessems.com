@@ -3,7 +3,8 @@ slug: how-to-create-a-clickable-breadboard-in-miro
 date: "2021-05-19"
 title: "How to create a clickable breadboard in Miro"
 description: "A quick tutorial on how to create a clickable prototype in Miro"
-categories: ["miro", "design"]
+tags: "miro, design"
+category: "technical article"
 published: true
 ---
 

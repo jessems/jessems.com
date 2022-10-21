@@ -1,10 +1,10 @@
 ---
 slug: what-is-the-graph
-date: '2021-03-10'
-title: 'What is The Graph'
-description: 'What is the Graph?'
-categories: ['technical', 'blockchain']
-keywords: ['ethereum', 'the graph']
+date: "2021-03-10"
+title: "What is The Graph"
+description: "What is the Graph?"
+tags: "blockchain"
+category: "technical article"
 published: true
 ---
 
@@ -12,13 +12,13 @@ published: true
 
 ### On indexing
 
-Indexing is a technique used in data retrieval which is analogous to the index you'll find at the back of most books. In a book's index you will find an alphabetically sorted list of words followed by the page numbers where you'll find those words in the book. 
+Indexing is a technique used in data retrieval which is analogous to the index you'll find at the back of most books. In a book's index you will find an alphabetically sorted list of words followed by the page numbers where you'll find those words in the book.
 
-The alphabetically ordered list of words allows you to quickly locate the word you're interested in and with it you can discover the pages on which that word occurs. 
+The alphabetically ordered list of words allows you to quickly locate the word you're interested in and with it you can discover the pages on which that word occurs.
 
 Imagine doing this without an index. You would have to go through every page one by one to check to see if the word occurs on the page. Now imagine the index not being sorted alphabetically, in fact it is not sorted at all. Again, you'd be required to go through every word one by one until you've hit your word of interest. The sorting makes your information retrieval task more efficient.
 
-Lastly, imagine that the index didn't contain the page numbers, but included the full page for each word. This would blow up the size of the index, and many pages would need to be repeated multiple times to account for different words occurring on the same page. By including pointers only (the page numbers) the index stays compact and easily traversable. 
+Lastly, imagine that the index didn't contain the page numbers, but included the full page for each word. This would blow up the size of the index, and many pages would need to be repeated multiple times to account for different words occurring on the same page. By including pointers only (the page numbers) the index stays compact and easily traversable.
 
 This is the essence of an index: A sorted list of values with pointers to the original location.
 
@@ -38,7 +38,7 @@ The Graph provides such an indexing service where developers can easily specify 
 
 The endpoint comes in the form of a GraphQL endpoint, which means that after specifying the schema of the data, any client making use of this endpoint can determine in their request, the type and structure of the data they want to get. This removes the tight coupling that typically exists between classical REST endpoints and their clients.
 
-This makes it easier for developers to support a wider range of use cases, and  this makes it easier for new clients to use the API and get the data they need in the format they need.
+This makes it easier for developers to support a wider range of use cases, and this makes it easier for new clients to use the API and get the data they need in the format they need.
 
 ### The Graph (future): A Decentralized Indexing Service
 

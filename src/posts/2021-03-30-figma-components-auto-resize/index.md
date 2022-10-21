@@ -1,16 +1,16 @@
 ---
 slug: how-to-create-figma-components-that-auto-resize-to-fit-their-contents
-date: '2021-03-21'
-title: 'How to create Figma components that auto-resize to fit their contents'
-description: 'How to create Figma components that auto-resize to fit their contents'
-categories: ['figma', 'design']
-keywords: ['figma']
+date: "2021-03-21"
+title: "How to create Figma components that auto-resize to fit their contents"
+description: "How to create Figma components that auto-resize to fit their contents"
+tags: "figma, design"
+category: "technical article"
 published: true
 ---
 
 ## The problem
 
-I created a component with an instance of another component (an icon) and a text field. 
+I created a component with an instance of another component (an icon) and a text field.
 
 ![](images/before-component.png)
 
@@ -34,7 +34,7 @@ Adding Auto Layout should give you an extra section in the Properties panel on t
 
 Here you can define the resizing behavior of the component, which will be applied automatically upon resizing. This is exactly what we want.
 
-The default is set to "Hug contents" for both the horizontal and vertical directions. This means the outer edge of the component will "hug" the inner content, resizing itself as the contents expands or shrinks. 
+The default is set to "Hug contents" for both the horizontal and vertical directions. This means the outer edge of the component will "hug" the inner content, resizing itself as the contents expands or shrinks.
 
 The result is a component that resizes with its contents.
 

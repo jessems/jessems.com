@@ -17,7 +17,14 @@ const BlogPost = ({ data: { mdx: post } }) => {
       </div>
       <div className="flex justify-center w-full">
         <div>
-          <iframe src="https://jessems.substack.com/embed" width="480" height="200" style={{background: 'white'}} frameborder="0" scrolling="no"></iframe>
+          <iframe
+            src="https://jessems.substack.com/embed"
+            width="480"
+            height="200"
+            style={{ background: "white" }}
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
     </Layout>
@@ -30,6 +37,8 @@ export const query = graphql`
       frontmatter {
         title
         slug
+        tags
+        category
       }
       body
     }

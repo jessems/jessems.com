@@ -3,8 +3,9 @@ slug: how-to-install-calculix-on-an-m1-mac
 date: "2022-09-02"
 title: "How to install Calculix on an M1 Mac"
 description: "A quick tutorial on how to install Calculix on an M1 Mac"
-categories: ["calculix", "m1"]
+tags: "calculix"
 published: true
+category: "technical article"
 ---
 
 Calculix consists of ccx and cgx.

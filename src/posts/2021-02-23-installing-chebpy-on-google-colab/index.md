@@ -1,10 +1,10 @@
 ---
 slug: installing-chebpy-on-google-colab
-date: '2021-02-23'
-title: 'Installing chebpy on google colab'
-description: 'Installing chebpy on google colab'
-categories: ['technical']
-keywords: ['python', 'colab']
+date: "2021-02-23"
+title: "Installing chebpy on google colab"
+description: "Installing chebpy on google colab"
+category: "technical article"
+tags: "python, chebpy"
 published: true
 ---
 
