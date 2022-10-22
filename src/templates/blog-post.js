@@ -10,8 +10,8 @@ const BlogPost = ({ data: { mdx: post } }) => {
   return (
     <Layout>
       <div className="container md:max-w-3xl mx-auto">
-        <article className="prose pt-16">
-          <h1>{title}</h1>
+        <article className="prose pt-16 prose-a:text-blue-300 prose-headings:text-white prose-ol:text-white">
+          <h1 className="text-white">{title}</h1>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
       </div>
@@ -21,7 +21,7 @@ const BlogPost = ({ data: { mdx: post } }) => {
             src="https://jessems.substack.com/embed"
             width="480"
             height="200"
-            style={{ background: "white" }}
+            style={{ background: "#101728", color: "#fff" }}
             frameborder="0"
             scrolling="no"
           ></iframe>
