@@ -35,8 +35,8 @@ const IndexPage = ({
           </p>
           <p className="mt-4">
             Some very smart people are arguing that our ability to do so has
-            been severely hemmoraged by increased interconnectedness and
-            algorithms.
+            been severely compromised by increased interconnectedness and
+            algorithmic content feeds.
           </p>
           <p className="mt-4">
             I try to do my part in improving the signal to noise ratio of the
