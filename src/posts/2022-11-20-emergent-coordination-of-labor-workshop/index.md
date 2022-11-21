@@ -1,5 +1,5 @@
 ---
-slug: emergent-coordination-workshop
+slug: emergent-coordination-of-labor-workshop
 date: "2022-11-20"
 title: "Emergent Coordination of Labor Workshop"
 description: "Workshop description"
