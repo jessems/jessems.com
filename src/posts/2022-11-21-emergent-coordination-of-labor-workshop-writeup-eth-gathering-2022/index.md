@@ -24,7 +24,7 @@ Then we affinity mapped them and gave labels to each cluster.
 
 ![](images/20221121065742.png)
 
-The emergent problem clusters were Networking, Venue, Schedule and Flow. Problem clusters, by the way, are great candidates for erecting a substructure around within your organization. At Deep Work are problem clusters become our departments.
+The emergent problem clusters were Networking, Venue, Schedule and Flow. Problem clusters, by the way, are great candidates for erecting a substructure around within your organization. At Deep Work our problem clusters become our departments.
 
 ![](images/20221121065759.png)
 
