@@ -17,11 +17,11 @@ var grTask = new GlideRecord("sc_task")
 grTask.initialize()
 
 // Set required fields
-grTask.short_description = "Short description"
-grTask.assignment_group = "e1376d164febc7808c73f5601310c743" // a sys_id
+grTask.setValue("short_description", "Short description")
+grTask.setValue("assignment_group", "e1376d164febc7808c73f5601310c743") // a sys_id
 
 // Set optional fields
-grTask.description = "Description of Task"
+grTask.setValue("description", "Description of Task")
 
 // Insert the record
 var taskSysId = grTask.insert()
