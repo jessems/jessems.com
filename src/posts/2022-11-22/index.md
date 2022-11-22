@@ -21,7 +21,7 @@ grTask.short_description = "Short description"
 grTask.assignment_group = "e1376d164febc7808c73f5601310c743" // a sys_id
 
 // Set optional fields
-gt.description = "Description of Task"
+grTask.description = "Description of Task"
 
 // Insert the record
 var taskSysId = grTask.insert()
