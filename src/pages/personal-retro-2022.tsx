@@ -17,7 +17,6 @@ const SecondPage = (props: PageProps) => (
       <img src={lessons} className="mt-8 mb-8 rounded-xl" />
       <p className="mt-8 text-gray-300">
         If that's a difficult question for you to answer — you're not alone.
-        Please do read on.
       </p>
       <p className="mt-8 text-gray-300">
         Reflecting on your past helps you grow.
@@ -25,35 +24,49 @@ const SecondPage = (props: PageProps) => (
       <p className="mt-8 text-gray-300 font-bold">
         Yet most people don't review their past year before they start the next.
       </p>
+      <p className="mt-8 text-gray-300">
+        Perhaps you're planning on setting goals for 2023. But did you also plan
+        on doing a quick review of how 2022 actually went?
+      </p>
       <p className="mt-8 text-gray-300">Why not?</p>
       <p className="mt-8 text-gray-300">There may be several reasons.</p>
       <p className="mt-8 text-gray-300">
-        Reflecting, as an activity, can feel too open-ended. How long should I
-        reflect for? On what? Until which point? You might not even know where
-        to start.
+        😵‍💫 <strong>Reflecting, as an activity, can feel too open-ended.</strong>{" "}
+        How long should I reflect for? On what? Until which point? You might not
+        even know where to start.
       </p>
       <p className="mt-8 text-gray-300">
-        It might feel unclear whether it will be worth it. How do you know
-        spending an hour on a couple of questions will be worth your time?
+        <strong>
+          🤔 Alternatively, it might feel unclear whether reflecting on your
+          year will be time well spent.
+        </strong>{" "}
+        How do you know spending an hour on a couple of questions will be worth
+        it?
       </p>
       <p className="mt-8 text-gray-300">
-        Finally, reflecting takes considerable time and effort. You can't just
-        reflect by running through a list of questions. You need to sit and
-        contemplate. Valuable insights usually come after you do some serious
-        digging and sometimes you need an outside perspective.
+        ⏱ Finally, <strong>reflecting properly takes time.</strong> It requires
+        contemplation. But what if you don't have a clear and concise plan to
+        follow? You might end up wasting a lot of time and effort.
       </p>
       <p className="mt-8 text-gray-300">
-        So we've established that reflection can feel open ended and that it
-        takes a lot of time. What do you typically do with a task that fits that
-        description?
+        So we've established that reflection can feel 😵‍💫 open ended, it takes a
+        lot of time ⏱ and it can feel unclear 🤔 if it's worth it.
       </p>
-      <p className="mt-8 text-gray-300">You procrastinate!</p>
       <p className="mt-8 text-gray-300">
-        You may want to review your year, but you end up not doing it. What if
-        you were guided through a step-by-step process that's proven to generate
-        the kinds of insights that help you grow? What if you could simply sit
-        in on one session and leave with an accurate and helpful summary of the
-        key lessons from last year?
+        What do you typically do with a task that fits that description?
+      </p>
+      <p className="mt-8 text-gray-300">
+        <strong>You procrastinate!</strong>
+      </p>
+      <p className="mt-8 text-gray-300">
+        You may want to review your year, but you end up not doing it.
+      </p>
+      <p className="mt-8 text-gray-300">
+        But what if you were guided through a clear step-by-step proven process
+        which was designed to help surface the insights that help us grow? What
+        if you could simply join a Zoom call and by the time you hang up you've
+        got an accurate and helpful summary of the key lessons of how your last
+        year went personally and professionally?
       </p>
       <p className="mt-8 text-gray-300">"Okay" you might say, "but how?"</p>
       <p className="mt-8 text-gray-300">
@@ -156,6 +169,14 @@ const SecondPage = (props: PageProps) => (
         instructions for those who want to keep certain parts of their retro
         private as well.
       </p>
+      <Link to="https://jessems.gumroad.com/l/personal-retro" target="_blank">
+        <button
+          type="button"
+          className="text-center mt-8 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+        >
+          Book your Personal Retro ($199)
+        </button>
+      </Link>
     </div>
   </LandingPage>
 )
