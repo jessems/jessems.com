@@ -171,15 +171,22 @@ const SecondPage = (props: PageProps) => (
         private as well.
       </p>
       <div className="text-center">
-        <Link to="https://jessems.gumroad.com/l/personal-retro" target="_blank">
+        <Link to="https://forms.gle/hLudCqixf5cqCdyF9" target="_blank">
           <button
             type="button"
             className="text-center mt-16 mb-16 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-lg px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           >
-            Book your Personal Retro ($199)
+            Book your Personal Retro ($0—$199*)
           </button>
         </Link>
       </div>
+      <p className="text-gray-300 text-sm">
+        * The Personal Retro is a <i>pay-what-you-want</i> product. You will be
+        asked to pay after the retro is complete and you can choose to pay any
+        amount you wish. Even $0. That said, the target price is $199 and if
+        you're happy with the retro, and you can afford it, I suggest that's
+        what you pay.
+      </p>
     </div>
   </LandingPage>
 )
