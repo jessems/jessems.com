@@ -79,7 +79,8 @@ const SecondPage = (props: PageProps) => (
         on the past year in parallel. You join a group Zoom call as well as a
         single large collaborative online whiteboard. On the whiteboard everyone
         gets their own little space and as your facilitator I'll guide you
-        through a set of retrospective exercises. Everybody works in parallel.
+        through a set of retrospective exercises while everybody works in
+        parallel.
       </p>
       <h3 className="mt-8 text-2xl">Wait... What's a retrospective?</h3>
       <p className="mt-8 text-gray-300">
@@ -169,14 +170,16 @@ const SecondPage = (props: PageProps) => (
         instructions for those who want to keep certain parts of their retro
         private as well.
       </p>
-      <Link to="https://jessems.gumroad.com/l/personal-retro" target="_blank">
-        <button
-          type="button"
-          className="text-center mt-8 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
-        >
-          Book your Personal Retro ($199)
-        </button>
-      </Link>
+      <div className="text-center">
+        <Link to="https://jessems.gumroad.com/l/personal-retro" target="_blank">
+          <button
+            type="button"
+            className="text-center mt-16 mb-16 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-lg px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+          >
+            Book your Personal Retro ($199)
+          </button>
+        </Link>
+      </div>
     </div>
   </LandingPage>
 )
