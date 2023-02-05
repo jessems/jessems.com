@@ -108,5 +108,6 @@ module.exports = {
         tailwind: true,
       },
     },
+    `gatsby-plugin-mdx-embed`,
   ],
 }
