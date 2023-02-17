@@ -3,5 +3,5 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
- import './src/styles/global.css'
- import '@fontsource/inter';
+import "./src/styles/global.css"
+import "@fontsource/inter"
