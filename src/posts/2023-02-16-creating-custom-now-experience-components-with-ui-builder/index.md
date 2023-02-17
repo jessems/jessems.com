@@ -94,7 +94,7 @@ In my case running `npm install` threw various errors. Run the following command
 npm install --global --production windows-build-tools
 ```
 
-(Mac only) older versions of OSX will have Python 2.7 installed. Newer versions will need to install it.
+(Mac only) older versions of OSX will have Python 2.7 installed. Newer versions will need to install it. This is how you can accomplish that ^[2].
 
 ```shell
 brew install pyenv
@@ -112,13 +112,13 @@ arch -x86_64 pyenv global 2.7.18
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 ```
 
-`node-gyp` is a tool that enables the compilation of native add-on modules for Node in multiple platforms. Somewhere in the dependency tree it appears to be included, so we need to make sure it's installed.
+`node-gyp` is a tool that enables the compilation of native add-on modules for Node in multiple platforms. Somewhere in the dependency tree it appears to be included, so we need to make sure it's installed [^3].
 
 ```shell
 npm install -g node-gyp
 ```
 
-Node-SASS seems to be a deprecated version of SASS used by the Now Experience framework. Make sure you're running Node 14 and install the legacy version of Node-SASS.
+Node-SASS seems to be a deprecated version of SASS used by the Now Experience framework. Make sure you're running Node 14 and install the legacy version of Node-SASS [^1].
 
 ```shell
 npm install node-sass@4.14
@@ -126,6 +126,17 @@ npm install node-sass@4.14
 
 ### Step 8: Run the component locally
 
+Now we're ready to run the component locally. Here's a [link](https://docs.servicenow.com/bundle/tokyo-application-development/page/build/components/task/develop-component.html) to the official docs.
+
 ```shell
 snc ui-component develop
 ```
+
+[^1]: https://stackoverflow.com/questions/74501317/whats-the-fix-for-error-node-sass-version-8-0-0-is-incompatible-with-4-0-0
+[^2]: https://github.com/TryGhost/node-sqlite3/issues/1552#issuecomment-1075059490
+[^3]: https://stackoverflow.com/questions/54059433/after-npm-install-an-error-about-a-syntax-error-in-python-appears
+
+### Additional resources
+
+https://www.servicenow.com/community/next-experience-forum/setting-up-the-servicenow-cli-snc-cli-for-custom-component/m-p/2392097
+[Walkthrough of some example components from ServiceNow](https://developer.servicenow.com/dev.do#!/reference/next-experience/sandiego/ui-framework/examples/counter)
