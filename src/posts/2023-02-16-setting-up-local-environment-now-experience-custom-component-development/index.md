@@ -8,6 +8,8 @@ published: true
 category: "technical"
 ---
 
+<YouTube youTubeId="QjUk1HnZwp4">
+
 Developing custom Now Experience components requires more tooling than conventional ServiceNow development. You'll need to install some software locally onto your Mac, PC or linux computer. The official docs might not get you all the way. This is a step by step guide starting from scratch and ending by deploying your first custom Next component to your instance.
 
 ## Prerequisites
@@ -83,7 +85,7 @@ snc ui-component --help
 
 ## Step 5: Install the CLI Metadata application on your instance
 
-1. Visit the ServiceNow Store and search for CLI Metadata. Then enable it for your instances.
+1. Visit the [ServiceNow Store](https://store.servicenow.com) and search for CLI Metadata. Then enable it for your instances.
 
 ![](images/20230217102210.png)
 
@@ -95,7 +97,7 @@ snc ui-component --help
 
 ## Step 6: Set up a named connection profile
 
-The official docs guide you towards creating a default connection profile, but as of this writing this doesn't seem to work. An effective workaround is setting up a _named_ connection profile as follows:
+The [official docs](https://docs.servicenow.com/bundle/sandiego-application-development/page/build/servicenow-cli/task/configure-profile.html) guide you towards creating a default connection profile, but as of this writing this doesn't seem to work. An effective workaround is setting up a _named_ connection profile as follows:
 
 In your command-line tool enter the following to set up a default connection profile:
 
@@ -106,6 +108,13 @@ snc configure profile set --profile <replace-with-your-profile-name>
 You'll be prompted for your instance URL and login details.
 
 For testing purposes you can pick Login Method: Basic and Default Output Format: JSON.
+
+The profile setup is saved to a config file in your home directory:
+
+```shell
+ ~/.snc/config.json # Linux / Mac
+%USERPROFILE%\.snc\config.json # Windows
+```
 
 ## Step 7: Set up the project
 
@@ -165,7 +174,7 @@ Node-SASS seems to be a deprecated version of SASS used by the Now Experience fr
 npm install node-sass@4.14
 ```
 
-### Step 8: Run the component locally
+## Step 9: Run the component locally
 
 Now we're ready to run the component locally. Here's a [link](https://docs.servicenow.com/bundle/tokyo-application-development/page/build/components/task/develop-component.html) to the official docs.
 
@@ -173,7 +182,7 @@ Now we're ready to run the component locally. Here's a [link](https://docs.servi
 snc ui-component develop
 ```
 
-### Step 9: Deploy the component to your instance
+## Step 10: Deploy the component to your instance
 
 Once you're ready to deploy your component you can do so as follows:
 
@@ -189,7 +198,8 @@ Then navigate to your instance, open UI Builder, open the Component selection di
 [^2]: https://github.com/TryGhost/node-sqlite3/issues/1552#issuecomment-1075059490
 [^3]: https://stackoverflow.com/questions/54059433/after-npm-install-an-error-about-a-syntax-error-in-python-appears
 
-### Additional resources
+## Additional resources
 
 - https://www.servicenow.com/community/next-experience-forum/setting-up-the-servicenow-cli-snc-cli-for-custom-component/m-p/2392097
 - [Walkthrough of some example components from ServiceNow](https://developer.servicenow.com/dev.do#!/reference/next-experience/sandiego/ui-framework/examples/counter)
+- [CLI Troubleshooting Thread on SN Forums](https://www.servicenow.com/community/developer-articles/now-cli-troubleshooting/ta-p/2322948)
