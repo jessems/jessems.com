@@ -8,7 +8,7 @@ published: true
 category: "technical"
 ---
 
-<YouTube youTubeId="QjUk1HnZwp4">
+<YouTube youTubeId="QjUk1HnZwp4" />
 
 Developing custom Now Experience components requires more tooling than conventional ServiceNow development. You'll need to install some software locally onto your Mac, PC or linux computer. The official docs might not get you all the way. This is a step by step guide starting from scratch and ending by deploying your first custom Next component to your instance.
 
