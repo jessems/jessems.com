@@ -1,5 +1,5 @@
 ---
-slug: custom-next-components-counter
+slug: next-experience-custom-component-counter
 date: "2023-03-02"
 title: "Creating a counter - Next Experience custom component development"
 description: "A tutorial how to create a counter component using ServiceNow's Next UI Experience."
