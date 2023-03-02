@@ -1,12 +1,14 @@
 ---
 slug: custom-next-components-counter
 date: "2023-03-02"
-title: "Creating a counter - Custom next component development"
+title: "Creating a counter - Next Experience custom component development"
 description: "A tutorial how to create a counter component using ServiceNow's Next UI Experience."
 tags: "servicenow"
 published: true
 category: "technical"
 ---
+
+<YouTube youTubeId="rLqIjxjgnjk" />
 
 The official docs (as of this writing) for creating a custom Next Experience "Counter Component" can be found [here](https://developer.servicenow.com/dev.do#!/reference/next-experience/tokyo/ui-framework/examples/counter), but they seem to be outdated. In some cases that means steps are [wrong](https://www.servicenow.com/community/developer-forum/setinitialstate-not-working-in-now-cli-develop-but-works-in/m-p/1455415) and it's not clear what the correct step should be. In this tutorial I hope to clarify such gaps by sharing what I did to achieve the same results.
 
