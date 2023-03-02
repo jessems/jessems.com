@@ -49,6 +49,9 @@ const IndexPage = ({
           <p className="mt-4">
             I'm also a designer, developer and workshop facilitator.
           </p>
+          <p className="mt-4">
+            You can get in touch via jessems that-email-symbol gmail dot com.
+          </p>
         </div>
         <div className="basis-[100%] md:basis-1/2 p-8">
           <img src={pic} className="rounded-lg" />
