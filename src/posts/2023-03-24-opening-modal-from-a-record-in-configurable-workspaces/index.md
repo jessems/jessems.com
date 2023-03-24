@@ -83,7 +83,7 @@ What's left is for us to connect the button with the Modal. What's more we want 
 2. Click "New" to create a new record.
 3. Enter in a name for your map. In our case "Crazy Page Map".
 4. Select "ui_action_bar" as the "Source elemnt ID".
-5. Select the Declarative Action Assignment we defined in [the previous tutorial](/triggering-a-modal-with-a-ui-builder-component-from-a-workspace/) for the field "Source Declarative Action". In our case that's "crazy-button".
+5. Select the Declarative Action Assignment we defined in [the previous tutorial](/adding-an-action-bar-button-to-a-configurable-workspace) for the field "Source Declarative Action". In our case that's "crazy-button".
 6. Set the macroponent to the CSM/FSM Configurable Workspace "Record" Macroponent using the `sysId` we looked up in Step 3.4.
 7. Selecting a Macroponent should load the options for the "Target Event" dropdown. Set this field to "[Record Page] Open modal". (If you want to trigger a different event, such as opening a tab, you need to select a different target event here.)
 8. Finally in the "Target Payload Mapping" field we need to paste this JSON object. It defines which fields we'll be able to send to the Modal and you don't have to alter the structure for other use cases. We'll only be using "route" and "fields".
@@ -125,7 +125,7 @@ What's left is for us to connect the button with the Modal. What's more we want 
 
 ## Step 4: Define the Payload
 
-The last remaining step is for us to define the payload of the event. Back in [the previous tutorial](/triggering-a-modal-with-a-ui-builder-component-from-a-workspace) we left this field blank.
+The last remaining step is for us to define the payload of the event. Back in [the previous tutorial](/adding-an-action-bar-button-to-a-configurable-workspace) we left this field blank.
 
 1. Navigate to Now Experience Framework > Actions and Events > Action Bar Declarative Actions and find the Declarative Action we defined in the previous tutorial. In our case it was called "Crazy Button"
 2. On the "Specify client action" field click the Record Preview button and open the record in a new tab.
