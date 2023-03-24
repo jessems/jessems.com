@@ -152,7 +152,7 @@ Now open the CSM/FSM Configurable Workspace, navigate to the Case Record and tes
 
 If you want to change the modal size, you can do so easily by adding a `size` key to the payload object in Step 4.3. Possible sizes are `sm`, `md`, `lg` and `fullscreen` e.g.
 
-````js
+```js
   {
     "route": "crazy-page",
     "size": "fullscreen",
@@ -169,5 +169,7 @@ If you want to change the modal size, you can do so easily by adding a `size` ke
 - [Arnoud Kooi's Declarative Action From Record Page Video](https://www.youtube.com/watch?v=C8KDDHUvNO8)
 - [Brad Tilton's Add a Button to the List Component Video](https://www.youtube.com/watch?v=lTDa8nFRvmU)
 - Special thanks to [Roy Wallimann](https://www.servicenow.com/community/user/viewprofilepage/user-id/270338) who wrote an internal BitHawk tutorial on triggering modals in workspaces
+
 ```
-````
+
+```
