@@ -159,3 +159,25 @@ In this example, the getFirstFalseValueIndex() function takes an array of boolea
 The reduce() method iterates over the array of boolean values and checks if the current value is true or false. If a false value is found, the method immediately returns its index without continuing to iterate over the rest of the array.
 
 Note that while using reduce() can be a more concise way to find the index of the first false value, it may not be as efficient as using a simple for loop for small arrays due to the overhead of creating a new accumulator function for each element in the array.
+
+## Integrating real world data
+
+### Prompt
+
+What are the top 10 desktop/laptop resolutions and give me their width, height in px and their aspect ratio in decimals?
+
+### Response
+
+Here are the top 10 desktop/laptop resolutions, along with their width and height in pixels, and their aspect ratio in decimals:
+
+1920x1080 - 1920 x 1080 - 16:9 (1.78)
+1366x768 - 1366 x 768 - 16:9 (1.78)
+2560x1440 - 2560 x 1440 - 16:9 (1.78)
+3840x2160 - 3840 x 2160 - 16:9 (1.78)
+1280x720 - 1280 x 720 - 16:9 (1.78)
+1600x900 - 1600 x 900 - 16:9 (1.78)
+1440x900 - 1440 x 900 - 16:10 (1.60)
+1280x800 - 1280 x 800 - 16:10 (1.60)
+1680x1050 - 1680 x 1050 - 16:10 (1.60)
+1920x1200 - 1920 x 1200 - 16:10 (1.60)
+Note that some of these resolutions have slightly different aspect ratios than their corresponding standardized aspect ratios (such as 16:9 and 16:10) due to rounding of pixel dimensions, but they are still considered to be part of these aspect ratio families.
