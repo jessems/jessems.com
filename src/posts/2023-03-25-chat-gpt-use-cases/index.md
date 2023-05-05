@@ -95,6 +95,339 @@ For example, if you specify a rule for a resolution of 768 pixels using "min-wid
 
 This principle is called "responsive design" and it's a fundamental concept in modern web development. By using responsive design techniques like media queries, web developers can create websites that adapt to different screen sizes and device types, providing a seamless user experience across different devices.
 
+## Interactively sculpting a solution
+
+### Prompt 1
+
+How would you implement error handling for an api call where you want to account for the api response object changing.
+
+### Response 1
+
+To implement error handling for an API call where you want to account for the API response object changing, you should use defensive programming techniques to validate and handle potential issues in the response. Here's an approach you can follow:
+
+Make the API call: Use a library like axios, fetch, or any other suitable library to make the API call.
+
+Check for HTTP errors: After making the call, check the HTTP status code to make sure it's in the expected success range (e.g., 200-299). If not, handle the error and provide a user-friendly message or fallback behavior.
+
+Validate the response structure: Use a schema validation library like ajv, joi, or yup to define the expected response structure and validate the API response against it. This will help you identify if the response object has changed.
+
+Implement error handling: When validating the response structure, handle any validation errors gracefully. This could include providing a default value, showing an error message to the user, or logging the error for further investigation.
+
+Here's a code example using JavaScript with axios and ajv:
+
+```js
+const axios = require("axios")
+const Ajv = require("ajv")
+
+const ajv = new Ajv()
+
+// Define the expected response schema
+const responseSchema = {
+  type: "object",
+  properties: {
+    data: {
+      type: "object",
+      properties: {
+        // Add the expected properties and their types here
+      },
+      required: [
+        // Add the required properties here
+      ],
+    },
+  },
+  required: ["data"],
+}
+
+async function makeApiCall(url) {
+  try {
+    // Make the API call
+    const response = await axios.get(url)
+
+    // Check for HTTP errors
+    if (response.status < 200 || response.status >= 300) {
+      throw new Error(`HTTP error: ${response.status} ${response.statusText}`)
+    }
+
+    // Validate the response structure
+    const isValid = ajv.validate(responseSchema, response.data)
+    if (!isValid) {
+      console.error("API response structure changed:", ajv.errorsText())
+      // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+    }
+
+    return response.data
+  } catch (error) {
+    console.error("Error making API call:", error.message)
+    // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+  }
+}
+
+// Use the makeApiCall function with your API URL
+makeApiCall("https://api.example.com/data")
+```
+
+By following this approach, you can account for changes in the API response object and handle errors gracefully.
+
+### Prompt 2
+
+Could you show me an example in ES5?
+
+### Response 2
+
+```js
+// Define the expected response structure
+var responseSchema = {
+  data: {
+    // Add the expected properties and their types here
+  },
+}
+
+function validateResponse(response) {
+  if (
+    !response ||
+    typeof response !== "object" ||
+    !response.hasOwnProperty("data")
+  ) {
+    return false
+  }
+
+  var responseData = response.data
+  for (var key in responseSchema.data) {
+    if (
+      !responseData.hasOwnProperty(key) ||
+      typeof responseData[key] !== responseSchema.data[key]
+    ) {
+      return false
+    }
+  }
+
+  return true
+}
+
+function makeApiCall(url, callback) {
+  var xhr = new XMLHttpRequest()
+  xhr.open("GET", url, true)
+
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var response
+      try {
+        response = JSON.parse(xhr.responseText)
+      } catch (error) {
+        console.error("Error parsing API response:", error)
+        callback(new Error("Error parsing API response"), null)
+        return
+      }
+
+      if (validateResponse(response)) {
+        callback(null, response)
+      } else {
+        console.error("API response structure changed")
+        // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+        callback(new Error("API response structure changed"), null)
+      }
+    } else {
+      console.error("HTTP error:", xhr.status, xhr.statusText)
+      callback(
+        new Error("HTTP error: " + xhr.status + " " + xhr.statusText),
+        null
+      )
+    }
+  }
+
+  xhr.onerror = function () {
+    console.error("Error making API call:", xhr.statusText)
+    callback(new Error("Error making API call"), null)
+  }
+
+  xhr.send()
+}
+
+// Use the makeApiCall function with your API URL
+makeApiCall("https://api.example.com/data", function (error, response) {
+  if (error) {
+    // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+  } else {
+    console.log("API response:", response)
+  }
+})
+```
+
+This example uses XMLHttpRequest to make the API call, a simple response validation function to check if the response object matches the expected structure, and a callback function to handle the result of the API call. Note that ES5 doesn't support Promises, so we are using a callback-based approach.
+
+### Prompt 3
+
+Could you show me this example in ServiceNow context?
+
+### Response 3
+
+In ServiceNow, you can use GlideHTTPRequest to make API calls and handle errors. Here's an example that demonstrates error handling for an API call in a ServiceNow script, considering the potential changes in the API response object:
+
+```js
+// Define the expected response structure
+var responseSchema = {
+  data: {
+    // Add the expected properties and their types here
+  },
+}
+
+function validateResponse(response) {
+  if (
+    !response ||
+    typeof response !== "object" ||
+    !response.hasOwnProperty("data")
+  ) {
+    return false
+  }
+
+  var responseData = response.data
+  for (var key in responseSchema.data) {
+    if (
+      !responseData.hasOwnProperty(key) ||
+      typeof responseData[key] !== responseSchema.data[key]
+    ) {
+      return false
+    }
+  }
+
+  return true
+}
+
+function makeApiCall(url) {
+  try {
+    var request = new sn_ws.RESTMessageV2()
+    request.setHttpMethod("GET")
+    request.setEndpoint(url)
+    request.setRequestHeader("Accept", "application/json")
+
+    var response = request.execute()
+    var httpResponseStatus = response.getStatusCode()
+
+    if (httpResponseStatus >= 200 && httpResponseStatus < 300) {
+      var responseBody = response.getBody()
+      var parsedResponse = JSON.parse(responseBody)
+
+      if (validateResponse(parsedResponse)) {
+        // Handle the valid response (e.g., process the data or log the result)
+        gs.info("API response: " + JSON.stringify(parsedResponse))
+      } else {
+        gs.error("API response structure changed")
+        // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+      }
+    } else {
+      gs.error(
+        "HTTP error: " + httpResponseStatus + " " + response.getErrorMessage()
+      )
+      // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+    }
+  } catch (error) {
+    gs.error("Error making API call: " + error)
+    // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+  }
+}
+
+// Use the makeApiCall function with your API URL
+makeApiCall("https://api.example.com/data")
+```
+
+This script uses GlideHTTPRequest to make the API call, validate the response structure, and handle potential errors. The validateResponse function checks if the response object matches the expected structure, and the makeApiCall function uses ServiceNow's RESTMessageV2 to make the request and handle errors. The script logs messages to the system logs with gs.info() and gs.error().
+
+### Prompt 4
+
+Can you repeat this example but make the schema a bit more complex?
+
+### Response 4
+
+Sure! Here's the ServiceNow script example with a more complex response schema:
+
+```js
+// Define the expected response structure
+var responseSchema = {
+  data: {
+    id: "string",
+    name: "string",
+    age: "number",
+    address: {
+      street: "string",
+      city: "string",
+      country: "string",
+    },
+    tags: "array",
+  },
+}
+
+function validateType(value, type) {
+  if (type === "array") {
+    return Array.isArray(value)
+  }
+  return typeof value === type
+}
+
+function validateResponse(response, schema) {
+  if (!response || typeof response !== "object") {
+    return false
+  }
+
+  for (var key in schema) {
+    var expectedType = schema[key]
+    if (
+      !response.hasOwnProperty(key) ||
+      !validateType(response[key], expectedType)
+    ) {
+      return false
+    }
+
+    if (typeof expectedType === "object" && !Array.isArray(expectedType)) {
+      if (!validateResponse(response[key], expectedType)) {
+        return false
+      }
+    }
+  }
+
+  return true
+}
+
+function makeApiCall(url) {
+  try {
+    var request = new sn_ws.RESTMessageV2()
+    request.setHttpMethod("GET")
+    request.setEndpoint(url)
+    request.setRequestHeader("Accept", "application/json")
+
+    var response = request.execute()
+    var httpResponseStatus = response.getStatusCode()
+
+    if (httpResponseStatus >= 200 && httpResponseStatus < 300) {
+      var responseBody = response.getBody()
+      var parsedResponse = JSON.parse(responseBody)
+
+      if (validateResponse(parsedResponse, responseSchema)) {
+        // Handle the valid response (e.g., process the data or log the result)
+        gs.info("API response: " + JSON.stringify(parsedResponse))
+      } else {
+        gs.error("API response structure changed")
+        // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+      }
+    } else {
+      gs.error(
+        "HTTP error: " + httpResponseStatus + " " + response.getErrorMessage()
+      )
+      // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+    }
+  } catch (error) {
+    gs.error("Error making API call: " + error)
+    // Handle the error (e.g., provide a default value, show an error message, or log the issue)
+  }
+}
+
+// Use the makeApiCall function with your API URL
+makeApiCall("https://api.example.com/data")
+```
+
+In this example, the responseSchema has been updated to include nested objects and an array. The validateType function is added to handle the 'array' type check since typeof does not return 'array' for arrays in JavaScript. The validateResponse function has been updated to accept a schema argument, so it can be used recursively to validate nested objects.
+
+The rest of the script remains the same as the previous example.
+
 ## Asking how to solve a relatively simple problem which is unique enough so that it might not be found through search
 
 ### Prompt (GPT 3.5)
@@ -181,3 +514,58 @@ Here are the top 10 desktop/laptop resolutions, along with their width and heigh
 1680x1050 - 1680 x 1050 - 16:10 (1.60)
 1920x1200 - 1920 x 1200 - 16:10 (1.60)
 Note that some of these resolutions have slightly different aspect ratios than their corresponding standardized aspect ratios (such as 16:9 and 16:10) due to rounding of pixel dimensions, but they are still considered to be part of these aspect ratio families.
+
+## Explaining syntax
+
+### Prompt
+
+Can you explain this syntax to me?
+
+const setEditing = editing => updateProperties({editing});
+
+### Response
+
+Certainly! This syntax demonstrates the definition of a constant named setEditing using an arrow function in JavaScript. Let's break it down:
+
+const setEditing: This declares a constant variable named setEditing. The const keyword indicates that the variable's value cannot be reassigned after its initial assignment.
+
+editing =>: This is an arrow function with a single parameter named editing. Arrow functions are a shorthand syntax for defining function expressions in JavaScript, introduced in ECMAScript 6 (ES6). The syntax for arrow functions is (param1, param2, ..., paramN) => { /_ function body _/ }. In this case, the function takes one parameter, editing.
+
+updateProperties({editing}): This is the function body of the arrow function. In this case, it's a single expression that calls the updateProperties function with an object as its argument. The object has a single property named editing, and its value is the same as the editing parameter of the arrow function.
+
+The shorthand {editing} is equivalent to {editing: editing}. This is an ES6 feature called "object property value shorthand" that allows you to define an object property with the same name as a variable more concisely.
+
+Putting it all together, const setEditing = editing => updateProperties({editing}); defines a constant setEditing that is assigned to an arrow function. The arrow function takes a single parameter editing and, when invoked, calls the updateProperties function with an object containing the editing property.
+
+## Converting technical jargon to user-friendly language
+
+### Prompt
+
+Write a message in German that is informative to the user when a first name doesn't correspond to this regex:
+
+/[\S\s]+[\S]+/g
+
+### Response
+
+"Der eingegebene Vorname entspricht nicht dem erwarteten Format. Bitte stellen Sie sicher, dass der Vorname mindestens ein Zeichen enthält und keine Leerzeichen am Anfang oder Ende hat."
+
+## Asking about best practices in programming
+
+### Prompt
+
+Can it be considered best practice, or acceptable practice, to throw an error yourself explicitly in a try block?
+
+### Response
+
+Yes, it can be considered an acceptable practice to throw an error explicitly in a try block. There are situations where you might want to throw a custom error with a more specific or informative message, or when you want to enforce certain conditions within your code. Throwing an error explicitly within a try block allows you to handle the error in a structured way using the catch block.
+
+That being said, it is important to use this technique judiciously and ensure that the custom errors you throw are informative and helpful for debugging. Additionally, you should make sure that the catch block properly handles these custom errors and that they don't lead to unintended side effects in your application.
+
+## Trivial question (CoPilot)
+
+### Prompt & Response
+
+```
+// Turn regex into a string // Prompt
+var regexString = regex.toString(); // Response
+```
