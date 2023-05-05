@@ -228,7 +228,9 @@ In this example, we define a JSON schema for the expected response, and then use
 
 By using a JSON schema to validate the response, you can catch changes to the JSON structure early and avoid unexpected bugs in your code.
 
-## Interactively sculpting a solution / Pair programming
+## Interactive / Pair programming
+
+The interaction with ChatGPT doesn't stop after one response. Each prompt and response are part of ChatGPT's memory, so you can ask follow up questions and get more information. This also allows you to do pair programming with ChatGPT.
 
 ### Prompt 1
 
@@ -591,6 +593,8 @@ You can use this function to find the index of the first false value in any sequ
 
 ## Integrating real world data
 
+ChatGPT is not able to access the internet. If you ask it to crawl a URL it might give you a response which seems like it did, but in reality it cannot (the OpenAI team is set to change this though with plugins soon). What ChatGPT is able to do is to pull in real world data based on its training data.
+
 ### Prompt
 
 What are the top 10 desktop/laptop resolutions and give me their width, height in px and their aspect ratio in decimals?
@@ -612,6 +616,8 @@ Here are the top 10 desktop/laptop resolutions, along with their width and heigh
 Note that some of these resolutions have slightly different aspect ratios than their corresponding standardized aspect ratios (such as 16:9 and 16:10) due to rounding of pixel dimensions, but they are still considered to be part of these aspect ratio families.
 
 ## Explaining code
+
+Similar to the tutor example, ChatGPT is great at explaining code. Either at a high level or line by line like in this example.
 
 ### Prompt
 
@@ -746,6 +752,8 @@ Object.clone = function (obj) {
 This is a method on the `Object` prototype that can be used to create a new object with the same properties as an existing object. This method uses the `Class.create` method to create a new object and then loops through all properties on the input object, assigning each one to the corresponding property on the new object. Finally, the new object is returned.
 
 ## Summarizing code
+
+If you feed an entire script file into ChatGPT and ask it to summarize it for you, it does a prety good job. You can even ask it to simplify it by asking to explain it to you as if you were 5 years old.
 
 ### Prompt
 
@@ -994,6 +1002,8 @@ Overall, this code is like a special tool that helps us make our database faster
 
 ## Soft skills
 
+Sometimes as a developer to complete a solution you'll need some input that traditionally comes from a business analyst, product manager or designer. ChatGPT offers a potent alternative.
+
 ### Prompt
 
 Write a message in German that is informative to the user when a first name doesn't correspond to this regex:
@@ -1026,6 +1036,8 @@ var regexString = regex.toString() // Response
 ```
 
 ## Writing tests
+
+The most common excuse I've heard for not writing tests for production code is that it takes too much time. It can indeed be a tedious task. ChatGPT can help you write your tests faster.
 
 ### Prompt
 
@@ -1141,7 +1153,7 @@ describe("Class", function () {
 
 This test suite covers all of the methods in the script include and verifies that they behave as expected. It tests that the `Class.create` method creates instances of a class with or without an `initialize` method, that the `Object.extend` method extends the destination object with the properties of the source object, that the `Object.extendsObject` method returns a clone of the destination object with the properties of the source object, and that the `Object.clone` method creates a clone of the object with the same properties.
 
-[When copy pasting the above into an ATF test it passes on 8/9 tests.]
+[When copy pasting the above into an ATF test (Server Script) it passes on 8/9 tests.]
 
 ## Translating ES6 to ES5
 
@@ -1351,6 +1363,8 @@ This should log the following output in the ServiceNow background script log:
 
 ## Mistake: Making up facts
 
+ChatGPT responds with a cohesive and plausible piece of language. Often it's reliable and highly valuable. Sometimes, though, it's completely made up and potentially damaging. So watch out!
+
 ### Prompt 1
 
 What methods exist on GlideRecord in ServiceNow?
@@ -1411,6 +1425,8 @@ Note that some of these methods may be available only in specific versions of Se
 [All these methods exist, except for `setValueWithDisplayValue(field, value)` which is a complete fabrication]
 
 ## Mistake: Communicating mistakes with confidence
+
+ChatGPT has no clue it's made as mistake. It treats mistakes and actual facts with the same degree of confidence. Even if you dig deeper it may not show any indication that it knows its answer is complete nonsense.
 
 ### Prompt
 
