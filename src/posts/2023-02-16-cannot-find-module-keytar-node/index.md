@@ -44,8 +44,9 @@ Some other things people[^1] [^2] have reported success with:
 
 ### Installing keytar
 
-```shell
-npm i -g keytar
+```bash
+cd ~/.snc/.extensions/
+npm install keytar@5.0.0
 ```
 
 ### Uninstalling and re-installing NVM
@@ -62,6 +63,6 @@ And you can reinstall the latest version by copy pasting the curl command with t
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
-[^1]: https://www.servicenow.com/community/developer-forum/error-cannot-find-module-build-release-keytar-node/m-p/2388697
+[^1]: https://www.servicenow.com/community/developer-forum/trouble-installing-servicenow-cli/m-p/1443635
 [^2]: https://www.servicenow.com/community/developer-forum/error-when-installing-now-cli-components-mac-os-mojave/m-p/1913898
 [^3]: https://github.com/nvm-sh/nvm/issues/298
