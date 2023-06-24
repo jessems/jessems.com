@@ -109,7 +109,7 @@ If we then drill down into `action.[[Target]].payload` we can see the test objec
 
 ![](images/20230409120653.png)
 
-## The view function
+## Step 2: Configuring the view function
 
 The view function is called with two arguments: `state` and `helpers`.
 
@@ -234,7 +234,7 @@ const view = (state, { updateProperties }) => {
 }
 ```
 
-## Step 2: Using an input field
+## Step 3: Using an input field
 
 Now that we have a way to update the `editing` property, let's use it to show an input field when the span is double clicked.
 
@@ -288,7 +288,7 @@ This gives us the following result:
 
 ![](images/20230409140115.gif)
 
-## Step 3: Listening for keyboard keys
+## Step 4: Listening for keyboard keys
 
 We've got a task item for which we can enter and exit edit mode, but perhaps you noticed ENTER and ESCAPE don't do anything. Let's fix that.
 
@@ -349,7 +349,7 @@ const inputCell = (
 
 Now when you double click the input field should be in focus.
 
-## Step 4: Adding the toggle
+## Step 5: Adding the toggle
 
 Now that we have a way to edit the label, let's add a toggle to mark the task as complete.
 
