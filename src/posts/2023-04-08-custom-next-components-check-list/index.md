@@ -4,22 +4,31 @@ date: "2023-04-08"
 title: "Custom Next Components: Check List"
 description: ""
 tags: "ServiceNow, Next Experience"
-published: false
+published: true
 category: "Technical"
 ---
 
-1. Switch to Node 14 using nvm `nvm use 14`
-2. Set up your project with `snc ui-component project --name @jessems/check-list --description 'A check list'`. When I did this after not having developed for a while, I got the the `keytar.node` error, for which I've written a post [here](cannot-find-module-keytar-node). What works for me is uninstalling the `ui-component` snc extension (`snc extension remove --name ui-component`) and reinstalling it again (`snc extension add --name ui-component`).
+This is a tutorial for building a checklist component using ServiceNow's Next Experience UI framework.
+
+The code for the checklist comes from ServiceNow themselves. They have an [official tutorial](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/checklist) of sorts for this component, but I found it to be a bit skimpy on the details. I'm writing this tutorial to fill in the gaps and to help me understand the component better.
+
+When you've completed the tutorial you'll end up with (essentially) the same code as ServiceNow has in [their respository](https://github.com/ServiceNowDevProgram/now-experience-component-examples/tree/quebec). Perhaps with some minor changes to make sure it works.
+
+## Before we begin
+
+This tutorial assumes you have your local development set up for Next Experience custom component development. You can read my guide on how to set up your local environment for next custom component development [here](https://jessems.com/setting-up-local-environment-now-experience-custom-component-development).
+
+## Setup
+
+1. Make sure you have `nvm` installed and switch to Node 14 using nvm `nvm use 14`
+
+2. Set up your project with `snc ui-component project --name @<your-username>/check-list --description 'A check list'`. When I did this after not having developed for a while, I got the the `keytar.node` error, for which I've written a post [here](cannot-find-module-keytar-node). What works for me is uninstalling the `ui-component` snc extension (`snc extension remove --name ui-component`) and reinstalling it again (`snc extension add --name ui-component`).
 
 3. Run `npm install`
 
 4. Run `snc ui-component develop` to run the instance locally
 
-## Structuring our project
-
-Let's follow ServiceNow's [instructions](https://developer.servicenow.com/dev.do#!/reference/next-experience/tokyo/ui-framework/best-practices/project-organization) on structuring our project.
-
-## Developing the check list item component
+## Step 1: The label and delete button
 
 We want to start off by building a check list item component. The overall check list will consist of a list of check list items. Each check list item will have a toggle, a label and a delete button.
 
@@ -98,11 +107,11 @@ If we then drill down into `action.[[Target]].payload` we can see the test objec
 
 ![](images/20230409120653.png)
 
-The commit for this step is: 4108296f8d81e689e4fb2a8014bd79e812cbb391
-
 ## The view function
 
-The view function is called with two arguments: `state` and `helpers`. `state` is an object that contains the state of the component. `helpers` is an object that contains helper functions that can be used to update the state of the component.
+The view function is called with two arguments: `state` and `helpers`.
+
+`state` is an object that contains the state of the component. `helpers` is an object that contains helper functions that can be used to update the state of the component.
 
 The helpers object contains the following functions:
 
@@ -190,7 +199,7 @@ const view = (state, { updateProperties }) => {
 }
 ```
 
-Here is the final code of our view function (commit: 35741d6e1abfcec99d831cf55fbe51cb0912b1ce):
+Here is the final code of our view function:
 
 ```jsx
 // Pass state and helpers object, destructure updateProperties from helpers
@@ -223,7 +232,7 @@ const view = (state, { updateProperties }) => {
 }
 ```
 
-## Using an input field
+## Step 2: Using an input field
 
 Now that we have a way to update the `editing` property, let's use it to show an input field when the span is double clicked.
 
@@ -277,9 +286,7 @@ This gives us the following result:
 
 ![](images/20230409140115.gif)
 
-The commit for this step is: 86367d9f058ecbf960a4adcecf9643f677656376
-
-## Listening for keyboard keys and dispatching an action
+## Step 3: Listening for keyboard keys
 
 We've got a task item for which we can enter and exit edit mode, but perhaps you noticed ENTER and ESCAPE don't do anything. Let's fix that.
 
@@ -340,9 +347,7 @@ const inputCell = (
 
 Now when you double click the input field should be in focus.
 
-The commit for this is ac276f3d25e8df771e761511080e0dd147d57a12
-
-## Adding the toggle
+## Step 4: Adding the toggle
 
 Now that we have a way to edit the label, let's add a toggle to mark the task as complete.
 
@@ -406,5 +411,3 @@ return (
 The result should look like this:
 
 ![](images/20230623134642.gif)
-
-The commit hash for this step is: ec1f29e867e8fcbb2c9c1217e570720035506a84
