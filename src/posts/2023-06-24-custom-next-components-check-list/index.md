@@ -10,7 +10,9 @@ category: "Technical"
 
 This is a tutorial for building a checklist component using ServiceNow's Next Experience UI framework.
 
-The code for the checklist comes from ServiceNow themselves. They have an [official tutorial](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/checklist) of sorts for this component, but I found it to be a bit skimpy on the details. I'm writing this tutorial to fill in the gaps and to help me understand the component better.
+![](images/20230624082917.png)
+
+The code for the checklist comes from ServiceNow themselves. They have an [official tutorial](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/checklist) — of sorts — for this component, but I found it to be a bit skimpy on the details. I'm writing this tutorial to fill in the gaps and to help me understand the component better.
 
 When you've completed the tutorial you'll end up with (essentially) the same code as ServiceNow has in [their respository](https://github.com/ServiceNowDevProgram/now-experience-component-examples/tree/quebec). Perhaps with some minor changes to make sure it works.
 
