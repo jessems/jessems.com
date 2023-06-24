@@ -569,3 +569,168 @@ That being said, it is important to use this technique judiciously and ensure th
 // Turn regex into a string // Prompt
 var regexString = regex.toString(); // Response
 ```
+
+## Writing tests
+
+## Translating ES6 to ES5
+
+The JavaScript engine which interprets the ServiceNow server-side code is based on the Rhino engine, which is an older version of the V8 engine used by Chrome and Node.js. As a result, the JavaScript engine in ServiceNow does not support all of the features introduced in modern versions of JavaScript i.e. ECMAScript 6 (ES6). This means that we can't simply copy paste modern ES6 libraries into a Script Include and expect them to work.
+
+Chat GPT, however, seems to be rather good at translating ES6 to ES5. Here's an example where I feed Chat GPT a state machine implementation written by Kent C. Dodds in ES6 and it spits out the ES5 equivalent:
+
+### Prompt
+
+Could you convert this to ES5 and replace console.log invocations with gs.info and put switch in quotes when it's used as a key
+
+```js
+function createMachine(stateMachineDefinition) {
+  const machine = {
+    value: stateMachineDefinition.initialState,
+    transition(currentState, event) {
+      const currentStateDefinition = stateMachineDefinition[currentState]
+      const destinationTransition = currentStateDefinition.transitions[event]
+      if (!destinationTransition) {
+        return
+      }
+      const destinationState = destinationTransition.target
+      const destinationStateDefinition =
+        stateMachineDefinition[destinationState]
+
+      destinationTransition.action()
+      currentStateDefinition.actions.onExit()
+      destinationStateDefinition.actions.onEnter()
+
+      machine.value = destinationState
+
+      return machine.value
+    },
+  }
+  return machine
+}
+
+const machine = createMachine({
+  initialState: "off",
+  off: {
+    actions: {
+      onEnter() {
+        console.log("off: onEnter")
+      },
+      onExit() {
+        console.log("off: onExit")
+      },
+    },
+    transitions: {
+      switch: {
+        target: "on",
+        action() {
+          console.log('transition action for "switch" in "off" state')
+        },
+      },
+    },
+  },
+  on: {
+    actions: {
+      onEnter() {
+        console.log("on: onEnter")
+      },
+      onExit() {
+        console.log("on: onExit")
+      },
+    },
+    transitions: {
+      switch: {
+        target: "off",
+        action() {
+          console.log('transition action for "switch" in "on" state')
+        },
+      },
+    },
+  },
+})
+
+let state = machine.value
+console.log(`current state: ${state}`)
+state = machine.transition(state, "switch")
+console.log(`current state: ${state}`)
+state = machine.transition(state, "switch")
+console.log(`current state: ${state}`)
+```
+
+### Response
+
+Sure! Here's the ES5 version of the code with gs.info replacing console.log:
+
+```js
+function createMachine(stateMachineDefinition) {
+  var machine = {
+    value: stateMachineDefinition.initialState,
+    transition: function (currentState, event) {
+      var currentStateDefinition = stateMachineDefinition[currentState]
+      var destinationTransition = currentStateDefinition.transitions[event]
+      if (!destinationTransition) {
+        return
+      }
+      var destinationState = destinationTransition.target
+      var destinationStateDefinition = stateMachineDefinition[destinationState]
+
+      destinationTransition.action()
+      currentStateDefinition.actions.onExit()
+      destinationStateDefinition.actions.onEnter()
+
+      machine.value = destinationState
+
+      return machine.value
+    },
+  }
+  return machine
+}
+
+var machine = createMachine({
+  initialState: "off",
+  off: {
+    actions: {
+      onEnter: function () {
+        gs.info("off: onEnter")
+      },
+      onExit: function () {
+        gs.info("off: onExit")
+      },
+    },
+    transitions: {
+      switch: {
+        target: "on",
+        action: function () {
+          gs.info('transition action for "switch" in "off" state')
+        },
+      },
+    },
+  },
+  on: {
+    actions: {
+      onEnter: function () {
+        gs.info("on: onEnter")
+      },
+      onExit: function () {
+        gs.info("on: onExit")
+      },
+    },
+    transitions: {
+      switch: {
+        target: "off",
+        action: function () {
+          gs.info('transition action for "switch" in "on" state')
+        },
+      },
+    },
+  },
+})
+
+var state = machine.value
+gs.info("current state: " + state)
+state = machine.transition(state, "switch")
+gs.info("current state: " + state)
+state = machine.transition(state, "switch")
+gs.info("current state: " + state)
+```
+
+[And this works when plugged into a ServiceNow Backgground Script]

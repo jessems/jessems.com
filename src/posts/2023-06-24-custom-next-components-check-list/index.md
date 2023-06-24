@@ -1,6 +1,6 @@
 ---
 slug: custom-next-components-check-list
-date: "2023-04-08"
+date: "2023-06-24"
 title: "Custom Next Components: Check List"
 description: ""
 tags: "ServiceNow, Next Experience"
