@@ -14,6 +14,8 @@ This is a collection of resources I've found useful when developing custom compo
 
 [Official Docs](https://developer.servicenow.com/dev.do#!/reference/next-experience/latest/ui-framework/getting-started/introduction)
 
+[Component API Reference](https://developer.servicenow.com/dev.do#!/reference/next-experience/components)
+
 ## Official Example Components
 
 - [Counter (Tutorial)](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/counter)
