@@ -18,6 +18,7 @@ This is a collection of resources I've found useful when developing custom compo
 
 ## Official Example Components
 
+- [Official Repository with Examples](https://github.com/ServiceNowDevProgram/now-experience-component-examples/tree/quebec)
 - [Counter (Tutorial)](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/counter)
 - [Counter (My Extended Tutorial)](custom-next-components-counter)
 - [Checklist (Tutorial)](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/examples/checklist)
