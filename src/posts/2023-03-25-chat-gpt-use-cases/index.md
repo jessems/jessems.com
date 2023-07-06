@@ -570,8 +570,6 @@ That being said, it is important to use this technique judiciously and ensure th
 var regexString = regex.toString(); // Response
 ```
 
-## Writing tests
-
 ## Translating ES6 to ES5
 
 The JavaScript engine which interprets the ServiceNow server-side code is based on the Rhino engine, which is an older version of the V8 engine used by Chrome and Node.js. As a result, the JavaScript engine in ServiceNow does not support all of the features introduced in modern versions of JavaScript i.e. ECMAScript 6 (ES6). This means that we can't simply copy paste modern ES6 libraries into a Script Include and expect them to work.
@@ -734,3 +732,17 @@ gs.info("current state: " + state)
 ```
 
 [And this works when plugged into a ServiceNow Backgground Script]
+
+## Writing friendly feedback
+
+### Prompt
+
+How do I see nicely that a panel discussion was super boring and completely irrelevant and unprofessional to go over time.
+
+### Response
+
+When communicating about a negative experience such as a boring and unprofessional panel discussion, it's helpful to be diplomatic and constructive. Here's how you might phrase it:
+
+"Thank you for the opportunity to attend the panel discussion. While I appreciate the efforts of all involved, I found the content to be less engaging than anticipated and, at times, not entirely relevant to the intended theme. Additionally, I observed that the duration of the discussion significantly exceeded the scheduled time. It's understandable that passionate discussions can run over time, but I believe greater adherence to the timetable could help maintain the audience's focus and energy. It would be fantastic to see more engaging, pertinent topics and stricter time management in future discussions."
+
+Remember, feedback is more likely to be received positively if it's balanced, respectful, and offers suggestions for improvement.
