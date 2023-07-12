@@ -1361,6 +1361,119 @@ This should log the following output in the ServiceNow background script log:
 *** Script: {"sysparm_query":"caller_id=javascript:gs.getUserID()^active=true^universal_requestISEMPTY","sysparm_view":"ess"}
 ```
 
+## Making sense of unwieldy log messages
+
+Sometimes ServiceNow throws an error that is hard to understand because there's so much text involved. Recently I've just been copying and pasting that text into Chat GPT to help me determine what's important and what the error is saying.
+
+### Prompt
+
+```bash
+Evaluator.evaluateString() problem: java.lang.RuntimeException: failed to coerce com.glide.script.fencing.ScopedGlideElement to desired type java.lang.String: com.glide.script.fencing.ScopedFunctionObjectTypeHandler.coerceFunctionArgument(ScopedFunctionObjectTypeHandler.java:174)
+org.mozilla.javascript.NativeJavaMethod.call(NativeJavaMethod.java:253)
+org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2652)
+org.mozilla.javascript.Interpreter.interpretLoop(Interpreter.java:1518)
+org.mozilla.javascript.Interpreter.interpret(Interpreter.java:830)
+org.mozilla.javascript.InterpretedFunction.lambda$call$0(InterpretedFunction.java:160)
+com.glide.caller.gen.sys_script_email_c2103be487807d105538c9170cbb3585.call(Unknown Source)
+com.glide.script.ScriptCaller.call(ScriptCaller.java:18)
+org.mozilla.javascript.InterpretedFunction.call(InterpretedFunction.java:159)
+org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2734)
+org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2657)
+org.mozilla.javascript.Interpreter.interpretLoop(Interpreter.java:1518)
+org.mozilla.javascript.Interpreter.interpret(Interpreter.java:830)
+org.mozilla.javascript.InterpretedFunction.lambda$exec$1(InterpretedFunction.java:176)
+com.glide.caller.gen.sys_script_email_c2103be487807d105538c9170cbb3585.call(Unknown Source)
+com.glide.script.ScriptCaller.call(ScriptCaller.java:18)
+org.mozilla.javascript.InterpretedFunction.exec(InterpretedFunction.java:175)
+com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:397)
+com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:209)
+com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:137)
+com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:348)
+com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:295)
+com.glide.notification.outbound.EmailFormatter.renderScript(EmailFormatter.java:368)
+com.glide.notification.outbound.EmailFormatter.collectCurlyScriptAndExecute(EmailFormatter.java:283)
+com.glide.notification.outbound.EmailFormatter.renderScriptInMessage(EmailFormatter.java:198)
+com.glide.notification.outbound.EmailFormatter.evaluateTemplateScript(EmailFormatter.java:164)
+com.glide.notification.cmn.NotificationDataEvaluator.evalMessage(NotificationDataEvaluator.java:259)
+com.glide.notification.cmn.NotificationDataEvaluator.changeDateTimeFormatsAndEvalMessage(NotificationDataEvaluator.java:209)
+com.glide.notification.cmn.NotificationDataEvaluator.evaluateNotificationData(NotificationDataEvaluator.java:165)
+com.glide.notification.cmn.NotificationDataEvaluator.evaluate(NotificationDataEvaluator.java:85)
+com.glide.notification.cmn.NotificationMessage.processTemplate(NotificationMessage.java:100)
+com.glide.notification.cmn.NotificationActionHandler.send(NotificationActionHandler.java:104)
+com.glide.notification.cmn.NotificationActionHandler.process(NotificationActionHandler.java:67)
+com.glide.policy.EventProcessor.process(EventProcessor.java:261)
+com.glide.policy.EventProcessor.processEventDuringNormalOperation(EventProcessor.java:225)
+com.glide.policy.EventProcessor.processEvent(EventProcessor.java:149)
+com.glide.policy.EventProcessor.process(EventProcessor.java:102)
+com.glide.policy.EventManager.processEvents(EventManager.java:317)
+com.glide.policy.EventManager._process(EventManager.java:192)
+com.glide.policy.EventManager.processDelegatedEvents(EventManager.java:162)
+com.glide.script.GlideSystem.js_processDelegatedEvents(GlideSystem.java:750)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:566)
+org.mozilla.javascript.MemberBox.invoke(MemberBox.java:138)
+org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:677)
+org.mozilla.javascript.FunctionObject.call(FunctionObject.java:614)
+org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2649)
+org.mozilla.javascript.Interpreter.interpretLoop(Interpreter.java:1518)
+org.mozilla.javascript.Interpreter.interpret(Interpreter.java:830)
+org.mozilla.javascript.InterpretedFunction.lambda$call$0(InterpretedFunction.java:160)
+com.glide.caller.gen._refname_.call(Unknown Source)
+com.glide.script.ScriptCaller.call(ScriptCaller.java:18)
+org.mozilla.javascript.InterpretedFunction.call(InterpretedFunction.java:159)
+org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:597)
+org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3573)
+org.mozilla.javascript.InterpretedFunction.exec(InterpretedFunction.java:172)
+com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:397)
+com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:209)
+com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:137)
+com.glide.script.ScriptEvaluator.evaluateStringWithPrefix(ScriptEvaluator.java:121)
+com.glide.script.Evaluator.evaluatePossiblePrefixedString(Evaluator.java:220)
+com.glide.job.RunScriptJob.evaluateScript(RunScriptJob.java:174)
+com.glide.job.RunScriptJob.evaluateScript(RunScriptJob.java:156)
+com.glide.job.RunScriptJob.execute(RunScriptJob.java:89)
+com.glide.schedule.JobExecutor.lambda$executeJob$0(JobExecutor.java:140)
+com.glide.schedule.JobExecutor.executeJob(JobExecutor.java:143)
+com.glide.schedule.JobExecutor.execute(JobExecutor.java:127)
+com.glide.schedule_v2.SchedulerWorkerThread.executeJob(SchedulerWorkerThread.java:328)
+com.glide.schedule_v2.SchedulerWorkerThread.lambda$process$0(SchedulerWorkerThread.java:219)
+com.glide.worker.TransactionalWorkerThread.executeInTransaction(TransactionalWorkerThread.java:35)
+com.glide.schedule_v2.SchedulerWorkerThread.process(SchedulerWorkerThread.java:219)
+com.glide.schedule_v2.SchedulerWorkerThread.run(SchedulerWorkerThread.java:100)
+```
+
+### Response
+
+The error message is saying that there is a failed attempt to coerce `com.glide.script.fencing.ScopedGlideElement` to the desired type `java.lang.String`.
+
+This error might occur when you are trying to use a GlideElement (a field in a record) directly in a function that requires a String. The solution typically involves ensuring that you're explicitly converting the GlideElement to a String before using it in a function that requires a String.
+
+For example, suppose `record` is a GlideRecord, and `field` is a field in that record. Instead of doing this:
+
+```javascript
+var problematicString = record.field
+```
+
+You should do this:
+
+```javascript
+var fixedString = "" + record.field
+```
+
+or
+
+```javascript
+var fixedString = record.field.toString()
+```
+
+Either of these methods will explicitly convert the GlideElement to a String before using it.
+
+You'll need to find where in your code this issue is occurring and make the necessary changes. Given that the stack trace refers to a script in an email notification (`sys_script_email`), it's likely that you have a dynamic email notification script that's causing the issue.
+
+Unfortunately, without the specific code causing the error, it's hard to give more specific advice. If you continue to have issues, I would suggest posting the code that is causing the error.
+
 ## Mistake: Making up facts
 
 ChatGPT responds with a cohesive and plausible piece of language. Often it's reliable and highly valuable. Sometimes, though, it's completely made up and potentially damaging. So watch out!
