@@ -241,11 +241,12 @@ chat_history = []
 def ask(question, chat_history):
     result = qa({"question": question, "chat_history": chat_history})
     chat_history.append((question, result["answer"]))
-    print(f"-> **Question**: {question} \n")
-    print(f"**Answer**: {result['answer']} \n")
+    with open('answers.md', 'a') as f:
+        f.write(f"**Question**: {question} \n\n")
+        f.write(f"**Answer**: {result['answer']} \n\n")
 ```
 
-Then ask your questions and watch them appear in markdown:
+Then ask your questions and watch them appear inside answers.md in markdown.
 
 ```python
 ask('How does GlideQuery work?', chat_history)
