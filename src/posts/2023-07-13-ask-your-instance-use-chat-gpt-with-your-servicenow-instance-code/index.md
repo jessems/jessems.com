@@ -46,7 +46,7 @@ On windows this would be:
 
 Then select the newly created venv from the interpreter dropdown in VSCode if its not selected already.
 
-![](images/20230713171022.gif)
+![](images/20230714121157.gif)
 
 ## Step 1: Getting your ServiceNow instance code
 
