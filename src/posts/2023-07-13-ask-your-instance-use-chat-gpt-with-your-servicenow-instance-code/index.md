@@ -10,6 +10,13 @@ category: "technical"
 
 In this tutorial I will show you how to use Chat GPT on a collection of script files from your ServiceNow instance. This allows you to chat with the code that is running on your instance.
 
+## Prequisites (for following along)
+
+- An environment to run an iPython notebook.
+- A ServiceNow instance to experiment with.
+- An [OpenAI API](https://openai.com/blog/openai-api) key.
+- An [ActiveLoop](https://activeloop.ai) token.
+
 ## Getting your developer instance password
 
 If you want to try this out on your own personal development instance, you may want to get your instance' username and password handy.
@@ -50,7 +57,7 @@ Then select the newly created venv from the interpreter dropdown in VSCode if it
 
 ## Step 1: Getting your ServiceNow instance code
 
-Now let's get the code from our ServiceNow instance. For this we'll use the amazing `psnc` library. This library allows you to easily interact with your ServiceNow instance from Python.
+Now let's get the code from our ServiceNow instance. For this we'll use the amazing [PySNC](https://servicenow.github.io/PySNC/) library. This library allows you to easily interact with your ServiceNow instance from Python.
 
 ```python
 import os
@@ -365,3 +372,4 @@ Also, remember to use `limit()` method when using `toArray()`, to avoid fetching
 - [StackOverflow question](https://stackoverflow.com/questions/76175046/how-to-add-prompt-to-langchain-conversationalretrievalchain-chat-over-docs-with)
 - [GlideQuery Blog Post by ServiceNow](https://developer.servicenow.com/blog.do?p=/post/glidequery-p1/)
 - [A GlideQuery Cheat Sheet by Sam Meylan](https://www.snow-adventures.com/blog/glidequery-cheat-sheet/)
+- [Official PySNC documentation](https://servicenow.github.io/PySNC/)
