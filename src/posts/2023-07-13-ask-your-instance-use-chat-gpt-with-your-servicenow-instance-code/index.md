@@ -12,13 +12,19 @@ In this tutorial I will show you how to use Chat GPT on a collection of script f
 
 ## Getting your developer instance password
 
+If you want to try this out on your own personal development instance, you may want to get your instance' username and password handy.
+
 To get your developer instance password go to developer.servicenow.com and click on the menu on the top right corner. Then select **Manage Instance Password** to see your developer instance password.
 
 ![](images/20230713171022.png)
 
 ## Setting up an iPython Notebook
 
-Note you can do all of this inside Google Colabs as well.
+Most of the LLM tooling is python-based and one convenient way of working with Python is through an iPython notebook. Google offers a hosted service to run iPython Notebook called [Google Colabs](colabs.google.com). I prefer develop locally using the iPython functionality within VSCode using the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter), [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) extensions.
+
+(If you use Google Colabs you don't need to worry about virtual environments, but you do need to preface all your shell commands with a `!` to run them in the shell.)
+
+If you go with a local iPython Notebook, read on.
 
 In a new folder type in the following to create a new virtual environment:
 
@@ -48,7 +54,7 @@ Then inside your virtual environment run pip install:
 pip install -qU --upgrade langchain 'deeplake[enterprise]' openai tiktoken pysnc
 ```
 
-## Getting your ServiceNow instance code
+## Step 1: Getting your ServiceNow instance code
 
 Now let's get the code from our ServiceNow instance. For this we'll use the amazing `psnc` library. This library allows you to easily interact with your ServiceNow instance from Python.
 
@@ -59,7 +65,7 @@ import pysnc
 # Create the directory if it does not exist
 os.makedirs('data/sys_script_include', exist_ok=True)
 
-client = pysnc.ServiceNowClient('dev168935', ('admin', 'g6f5EZpn$=GY'))
+client = pysnc.ServiceNowClient('dev168935', ('admin', getpass.getpass("Dev Instance Password:")))
 gr = client.GlideRecord('sys_script_include')
 gr.add_query('sys_package', '16ce0f75e8e1211076da10591ad28708')
 gr.query()
@@ -363,4 +369,5 @@ Also, remember to use `limit()` method when using `toArray()`, to avoid fetching
 
 - [Official Langchain tutorial](https://python.langchain.com/docs/use_cases/code/twitter-the-algorithm-analysis-deeplake)
 - [StackOverflow question](https://stackoverflow.com/questions/76175046/how-to-add-prompt-to-langchain-conversationalretrievalchain-chat-over-docs-with)
-- [GlideQuery Blog Post](https://developer.servicenow.com/blog.do?p=/post/glidequery-p1/)
+- [GlideQuery Blog Post by ServiceNow](https://developer.servicenow.com/blog.do?p=/post/glidequery-p1/)
+- [A GlideQuery Cheat Sheet by Sam Meylan](https://www.snow-adventures.com/blog/glidequery-cheat-sheet/)
