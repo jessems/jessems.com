@@ -48,12 +48,6 @@ Then select the newly created venv from the interpreter dropdown in VSCode if it
 
 ![](images/20230713171022.gif)
 
-Then inside your virtual environment run pip install:
-
-```bash
-pip install -qU --upgrade langchain 'deeplake[enterprise]' openai tiktoken pysnc
-```
-
 ## Step 1: Getting your ServiceNow instance code
 
 Now let's get the code from our ServiceNow instance. For this we'll use the amazing `psnc` library. This library allows you to easily interact with your ServiceNow instance from Python.
