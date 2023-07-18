@@ -17,7 +17,9 @@ In this tutorial I will show you how to use Chat GPT on a collection of script f
 - An [OpenAI API](https://openai.com/blog/openai-api) key.
 - An [ActiveLoop](https://activeloop.ai) token.
 
-## Getting your developer instance password
+## Step 0: Setup
+
+### Getting your developer instance password
 
 If you want to try this out on your own personal development instance, you may want to get your instance' username and password handy.
 
@@ -25,7 +27,7 @@ To get your developer instance password go to developer.servicenow.com and click
 
 ![](images/20230713171022.png)
 
-## Setting up an iPython Notebook
+### Setting up an iPython Notebook
 
 Most of the LLM tooling is python-based and one convenient way of working with Python is through an iPython notebook. Google offers a hosted service to run iPython Notebook called [Google Colabs](colabs.google.com). I prefer develop locally using the iPython functionality within VSCode using the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter), [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) extensions.
 
@@ -55,6 +57,12 @@ Then select the newly created venv from the interpreter dropdown in VSCode if it
 
 ![](images/20230714121157.gif)
 
+To install all the needed libraries we need to start off by running the following (inside our virtual environment):
+
+```bash
+pip install -qU --upgrade langchain 'deeplake[enterprise]' openai tiktoken pysnc
+```
+
 ## Step 1: Getting your ServiceNow instance code
 
 Now let's get the code from our ServiceNow instance. For this we'll use the amazing [PySNC](https://servicenow.github.io/PySNC/) library. This library allows you to easily interact with your ServiceNow instance from Python.
@@ -79,6 +87,8 @@ for i, r in enumerate(gr):
     print(f"Finished writing file for record {i}: {r.name}.js")
 ```
 
+## Step 2: Creating embeddings
+
 Now let's get ready to connect with OpenAI and ActiveLoop AI:
 
 ```python
@@ -99,7 +109,9 @@ For the embeddings let's use the Open AI embeddings:
 embeddings = OpenAIEmbeddings(disallowed_special=())
 ```
 
-Now let's chunk the files:
+## Step 3: Chunking the files
+
+Now let's load and split the files using [`TextLoader`](https://python.langchain.com/docs/modules/data_connection/document_loaders/) and its load_and_split method:
 
 ```python
 import os
@@ -121,7 +133,7 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             pass
 ```
 
-Let's confirm the files were chunked correctly:
+Let's confirm the files were split correctly:
 
 ```python
 print (f"You have {len(docs)} documents\n")
@@ -147,7 +159,7 @@ Schema.fromTable = function fromTable(table, fields) {
 		NiceError.raise("Unknown table: '" + table + "'");
 ```
 
-Now let's chunk the files:
+## Step 4: Adding the chunks to the vector store
 
 ```python
 from langchain.text_splitter import CharacterTextSplitter
@@ -194,6 +206,8 @@ db = DeepLake(
 )
 ```
 
+## Step 5: Creating the retriever
+
 Let's define a retriever:
 
 ```python
@@ -204,7 +218,9 @@ retriever.search_kwargs["maximal_marginal_relevance"] = True
 retriever.search_kwargs["k"] = 10
 ```
 
-Set up the retriever and configure our prompt. I've customized this a bit in relation to the original Langchain tutorial so that Open AI returns a markdown response and includes plenty of code snippets.
+## Step 6: Creating the chatbot
+
+I've customized this a bit in relation to the original Langchain tutorial so that Open AI returns a markdown response and includes plenty of code snippets.
 
 ````python
 from langchain.chat_models import ChatOpenAI
@@ -245,6 +261,8 @@ def ask(question, chat_history):
         f.write(f"**Question**: {question} \n\n")
         f.write(f"**Answer**: {result['answer']} \n\n")
 ```
+
+## Step 7: Asking questions
 
 Then ask your questions and watch them appear inside answers.md in markdown.
 
