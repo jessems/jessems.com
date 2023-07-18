@@ -10,6 +10,10 @@ category: "technical"
 
 In this tutorial I will show you how to use Chat GPT on a collection of script files from your ServiceNow instance. This allows you to chat with the code that is running on your instance.
 
+You can follow along with the video, or with the blog post below.
+
+<YouTube youTubeId="T2e4cbnHD0g" />
+
 ## Prequisites (for following along)
 
 - An environment to run an iPython notebook.
