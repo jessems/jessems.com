@@ -8,6 +8,8 @@ published: true
 category: "Technical"
 ---
 
+<YouTube youTubeId="GjUv0h9Lj4A" />
+
 This is a tutorial for building a checklist component using ServiceNow's Next Experience UI framework.
 
 ![](images/20230624082917.png)
@@ -413,3 +415,383 @@ return (
 The result should look like this:
 
 ![](images/20230623134642.gif)
+
+## Step 6: Directory structure
+
+Let's start with encapsulating the checklist item. Let's create a directory called `checklist-item` and move `index.js` and `styles.scss` into it.
+
+Then let's rename the parent directory from "x-733577-check-list" to "checklist". You may want to change the name and contents the test file that was generated automatically as well. The resulting structure of the `src` directory should look like this:
+
+```shell
+.
+└── checklist
+    ├── __tests__
+    │   └── test.checklist.js
+    ├── checklist-item
+    │   ├── index.js
+    │   └── styles.scss
+    └── index.js
+```
+
+You'll want to make sure the checklist folder has an `index.js` file which contains the following:
+
+```js
+import "./checklist-item"
+```
+
+We also need to change our `createCustomElement` declaration to reflect the new directory structure:
+
+```jsx
+createCustomElement("checklist", {
+  // View and actionHandlers omitted for brevity
+})
+```
+
+You will need to stop (CTRL + C on Windows, CMD + C on Mac) and restart `snc ui-component develop` the development server to make sure your changes are picked up.
+
+You will also need to rename the reference in the now-ui.json config file:
+
+```json
+{
+  "components": {
+    "checklist": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "My Component",
+        "icon": "document-outline",
+        "description": "A description of my component",
+        "category": "primitives"
+      }
+    }
+  },
+  "scopeName": "x_733577_jessems_2"
+}
+```
+
+## Step 7: Refactoring the constants
+
+Let's put the constants in a constants file. Create a file called `constants.js` in the `checklist` directory. Then create two constants for the enter and escape keys we used earlier as well as one for the event that is fired on toggle click:
+
+```js
+export const ENTER_KEY_CODE = 13
+export const ESC_KEY_CODE = 27
+export const TOGGLE_CLICKED = "NOW_TOGGLE#CLICKED"
+```
+
+Then import them into `src/checklist/checklist-item/index.js`:
+
+```js
+import { ENTER_KEY_CODE, ESC_KEY_CODE, TOGGLE_CLICKED } from "../constants"
+// the rest of the code omitted for brevity
+```
+
+Then use the key codes in the `on-keydown` handler in `index.js`:
+
+```jsx
+// ...
+on-keydown={({keyCode, target: {value: label}}) => {
+					const newLabel = label.trim();
+					if (keyCode === ENTER_KEY_CODE) { // 👈 Use the constant
+						setEditing(false);
+						if (newLabel) {
+							dispatch(CHECKLIST_ITEM_UPDATED, {
+								itemId,
+								short_description: newLabel
+							});
+						}
+					} else if (keyCode === ESC_KEY_CODE) { // 👈 Use the constant
+						setEditing(false);
+					}
+				}}
+// ...
+```
+
+And use the toggle event constant in the `actionHandlers`:
+
+```jsx
+createCustomElement("checklist-item", {
+  actionHandlers: {
+    [TOGGLE_CLICKED]: e => {
+      // ☝️ Use the constant
+      console.log("I've been clicked")
+      console.log(e)
+    },
+  },
+  // ..
+})
+```
+
+## Step 8: Refactoring Actions Handlers and Views
+
+Let's move the action handlers and view into their own files. Create a file called `actions.js` in the `checklist` directory and move the action handlers (including the import we just updated) into it:
+
+```js
+import { TOGGLE_CLICKED } from "../../constants"
+
+export default {
+  actionHandlers: {
+    [TOGGLE_CLICKED]: e => {
+      console.log("I've been clicked")
+      console.log(e)
+    },
+  },
+}
+```
+
+Before we import the actions into `index.js`, let's create a file called `view.js` in the `checklist` directory and move the view into it and export it:
+
+```jsx
+import "@servicenow/now-toggle"
+import { ENTER_KEY_CODE, ESC_KEY_CODE } from "../constants"
+
+export default (state, { updateProperties }) => {
+  const {
+    properties: { label, editing, active },
+  } = state
+
+  const setEditing = editing => updateProperties({ editing })
+
+  const labelCell = (
+    <span
+      className="now-checklist-item-cell"
+      on-dblclick={() => setEditing(true)}
+    >
+      {label}
+    </span>
+  )
+
+  const inputCell = (
+    <span className="now-checklist-item-cell" role="cell">
+      <input
+        className="now-checklist-item-input"
+        value={label}
+        hook-insert={vnode => vnode.elm.focus()}
+        on-keydown={({ keyCode, target: { value: label } }) => {
+          const newLabel = label.trim()
+          if (keyCode === ENTER_KEY_CODE && newLabel) {
+            updateProperties({ label: newLabel })
+            setEditing(false)
+          } else if (keyCode === ESC_KEY_CODE) {
+            setEditing(false)
+          }
+        }}
+        on-blur={() => setEditing(false)}
+      />
+    </span>
+  )
+
+  return (
+    <div className="now-checklist-item">
+      <span className="now-checklist-item-cell -center" role="cell">
+        <now-toggle checked={active} disabled={editing} />
+      </span>
+      {editing ? inputCell : labelCell}
+      <now-button-iconic
+        icon="close-outline"
+        tooltipContent="Delete"
+        size="sm"
+        variant="tertiary"
+        appendToPayload={{ testKey: "testValue" }}
+      />
+    </div>
+  )
+}
+```
+
+Then let's rename `src/checklist/checklist-item/index.js` to `src/checklist/checklist-item/checklist-item.js` and import and replace the actions and view:
+
+```js
+import { createCustomElement } from "@servicenow/ui-core"
+import snabbdom from "@servicenow/ui-renderer-snabbdom"
+import styles from "./styles.scss"
+import "@servicenow/now-toggle"
+import "@servicenow/now-button"
+import checklistItemAction from "./actions"
+import view from "./view"
+
+createCustomElement("checklist-item", {
+  view,
+  properties: {
+    label: {
+      default: "Enter a label",
+    },
+    editing: {
+      default: false,
+    },
+    active: {
+      default: false,
+    },
+  },
+  renderer: { type: snabbdom },
+  styles,
+  ...checklistItemAction,
+})
+```
+
+Finally, let's create a `src/checklist/checklist-item/index.js` file to import the `checklist-item.js` file:
+
+```js
+import "./checklist-item"
+```
+
+Your final directory structure should look like this:
+
+```shell
+.
+└── checklist
+    ├── __tests__
+    │   └── test.checklist.js
+    ├── checklist-item
+    │   ├── actions.js
+    │   ├── checklist-item.js
+    │   ├── index.js
+    │   ├── styles.scss
+    │   └── view.js
+    ├── constants.js
+    └── index.js
+```
+
+The hash for this commit is: bd295d8347bcaad904b5c1e01e69977ca021ca16
+
+## Step 9: Adding CSS to the checklist item
+
+Let's add the SCSS provided by ServiceNow to the checklist item
+
+Rename the styles.scss file to `checklist-item.scss` and add the following:
+
+```scss
+@import "@servicenow/sass-kit/host";
+
+:host {
+  display: block;
+}
+
+.now-checklist-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: now-fn-px2rem(120px) 1fr now-fn-px2rem(32px);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: RGB($now-color--divider-secondary);
+}
+
+.now-checklist-item-cell {
+  display: flex;
+  padding: $now-global-space--sm;
+
+  &:first-child {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: RGB($now-color--divider-secondary);
+  }
+
+  &.-center {
+    justify-content: center;
+  }
+}
+
+.now-checklist-item-input {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+```
+
+Then update the import statement in `checklist-item.js`:
+
+```js
+// ...
+import styles from "./checklist-item.scss"
+// ...
+```
+
+The result should look like this:
+
+![Checklist item with styles](./images/20230704062423.gif)
+
+The hash for this commit is 269e20fa333e970b87c86cfc9e51bfc032d601ae
+
+## Step 10: Configuring the action handler
+
+We're almost ready with our check list component.
+
+Let's update the action handler so that when a checklist item is updated there's an event that propagates up to the parent checklist component.
+
+First let's prevent the original TOGGLE_CLICKED event from propagating up to the parent checklist component and let's define an effect ([link to Docs](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/main-concepts/action-handlers#effects)), which is a way of allowing us to define what custom actions we want to take when a checklist item is updated.
+
+```jsx
+import { TOGGLE_CLICKED } from "../constants"
+
+export default {
+  actionHandlers: {
+    [TOGGLE_CLICKED]: {
+      stopPropagation: true,
+      effect: ({ state, action, dispatch }) => {},
+    },
+  },
+}
+```
+
+We set the `effect` property to a function definition. This function will be invoked when the `TOGGLE_CLICKED` action is triggered. It receives an object with the following properties:
+
+- `state`: the current state of the component
+- `action`: the action that was triggered
+- `dispatch`: a function that allows us to dispatch actions
+
+Inside the effect function definition let's disable the default action handler for `TOGGLE_CLICKED` so we can handle it ourselves. We do this by invoking the [`preventDefault`](https://developer.servicenow.com/dev.do#!/reference/next-experience/utah/ui-framework/main-concepts/action-handlers#preventing-default-action-handlers) method on the action object:
+
+```jsx
+import { TOGGLE_CLICKED } from "../constants"
+
+export default {
+  actionHandlers: {
+    [TOGGLE_CLICKED]: {
+      stopPropagation: true,
+      effect: ({ state, action, dispatch }) => {
+        action.preventDefault()
+      },
+    },
+  },
+}
+```
+
+Then let's get the checklist-item `itemId` by destructuring the `state.properties` object and the checklist-item `value` by destructuring the `action.payload` object. Finally let's also dispatch our own action which we'll call `CHECKLIST_ITEM_UPDATED` and we'll provide it the payload of an object with the `itemId` and the `value`:
+
+```jsx
+import { TOGGLE_CLICKED } from "../constants"
+
+export default {
+  actionHandlers: {
+    [TOGGLE_CLICKED]: {
+      stopPropagation: true,
+      effect: ({ state, action, dispatch }) => {
+        action.preventDefault()
+        const { itemId } = state.properties
+        const { value } = action.payload
+        dispatch(CHECKLIST_ITEM_UPDATED, { itemId, active: value })
+      },
+    },
+  },
+}
+```
+
+Right now we're not doing anything with the `CHECKLIST_ITEM_UPDATED` action, but we'll do that in a future step.
+
+The commit hash for this step is a56b25ba6eed3e83d884b07523a57e0306d44ac6
+
+## Step 11: Adding the checklist item to the checklist
+
+Let's have a quick look at the blueprint of what we're building.
+
+![Blueprint of what we're building](images/20230705061227.png)
+
+We're going to have a checklist component which will contain a header, a search input (to filter the checklist items), the list of checklist-items and a footer with some calculated values and buttons.
+
+Unlike in the checklist-item component let's start off by encapsulating the actionHandlers and View from the get go.
+
+To keep things simple let's just try to display our checklist-item component from within our new parent checklist-component.
+
+Let's start by creating a folder at the same level as `checklist-item` called `checklist`. Inside this folder let's create a `checklist.js` file, a `view.js` file and a `actions.js` file
