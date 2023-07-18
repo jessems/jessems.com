@@ -8,6 +8,8 @@ published: true
 category: "technical"
 ---
 
+<YouTube youTubeId="C_USLb_x3Vg" />
+
 Chat GPT has taken the world by storm resulting in it becoming the fastest growing consumer product in history and also one of the largest in terms of users. It has proven particularly capable in the realm of programming and there are many examples of it being used to generate and improve code. In this post I explore the various use cases for using Chat GPT to make your life as a ServiceNow developer easier.
 
 Some high level take-aways:
