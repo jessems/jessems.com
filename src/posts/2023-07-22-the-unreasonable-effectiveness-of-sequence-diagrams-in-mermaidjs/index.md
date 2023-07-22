@@ -8,6 +8,8 @@ published: true
 category: "technical"
 ---
 
+![](images/20230722225447.png)
+
 Recently I came across this article written by the founder of MermaidJS, Knut Sveidqvist:
 
 [Sequence diagrams, the only good thing UML brought to software development](https://www.mermaidchart.com/blog/posts/sequence-diagrams-the-good-thing-uml-brought-to-software-development)
