@@ -2,7 +2,7 @@
 slug: the-unreasonable-effectiveness-of-sequence-diagrams-in-mermaidjs
 date: "2023-07-22"
 title: "The Unreasonable Effectiveness of Sequence Diagrams in MermaidJS"
-description: ""
+description: "The Unreasonable Effectiveness of Sequence Diagrams in MermaidJS"
 tags: "mermaid, sequence diagrams, servicenow"
 published: true
 category: "technical"
